@@ -1,263 +1,987 @@
-<!DOCTYPE html>              <!-- Document Type Declaration -->
-<html lang="en">              <!-- Root element, lang attribute for accessibility -->
-<head>                       <!-- Metadata container -->
-    <meta charset="UTF-8">   <!-- Character encoding -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive design -->
-    <title>Page Title</title> <!-- Browser tab title -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="HTML5 Experiment demonstrating commonly used HTML5 elements for Backend Development Lab">
+    <meta name="author" content="Saksham Katiyar">
+
+    <title>Experiment 1 - HTML5 Elements</title>
 </head>
-<body>                       <!-- Visible content container -->
-    <!-- Content goes here -->
 
-<!-- Header - Represents introductory content or navigational aids -->
-<header>
-    <h1>Company Name</h1>
-    <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
-        </ul>
-    </nav>
-</header>
+<body>
 
-<!-- Navigation - Represents section with navigation links -->
-<nav>
-    <!-- navigation links -->
-</nav>
+    <!-- ================= HEADER ================= -->
 
-<!-- Main - Represents the dominant content -->
-<main>
-    <!-- primary content -->
-    <article>
-        <!-- self-contained composition -->
-        <h2>Article Title</h2>
-        <p>Article content...</p>
-    </article>
-    
-    <section>
-        <!-- thematic grouping of content -->
-        <h2>Section Title</h2>
-        <p>Section content...</p>
-    </section>
-</main>
-<section id="about">
-    <h2>About Backend Development</h2>
-    <p>Backend development involves server-side programming, database management, and API creation.</p>
-    
-    <h3>Key Concepts</h3>
-    <p><strong>Server-Side Programming:</strong> Writing code that runs on the server.</p>
-    <p><em>Database Management:</em> Storing and retrieving data efficiently.</p>
-    <p><mark>API Development:</mark> Creating interfaces for frontend-backend communication.</p>
-    <p><del>Traditional approaches</del> have been replaced by <ins>modern frameworks</ins>.</p>
-    <p>Example: <code>const result = await fetch('/api/data');</code></p>
-    <p>Shortcut: <kbd>Cmd + Shift + I</kbd> opens developer tools.</p>
-</section>
-<section id="courses">
-    <h2>Backend Technologies</h2>
-    <ul>
-        <li>Programming Languages
-            <ul>
-                <li>Python</li>
-                <li>JavaScript (Node.js)</li>
-                <li>Java</li>
-                <li>Ruby</li>
-            </ul>
-        </li>
-        <li>Frameworks
-            <ul>
-                <li>Django</li>
-                <li>Flask</li>
-                <li>Express.js</li>
-                <li>Spring Boot</li>
-            </ul>
-        </li>
-        <li>Databases
-            <ul>
-                <li>MySQL</li>
-                <li>PostgreSQL</li>
-                <li>MongoDB</li>
-                <li>Redis</li>
-            </ul>
-        </li>
-    </ul>
+    <header>
+        <h1>Backend Development Lab</h1>
+        <h2>Experiment 1 - HTML5 Elements</h2>
 
-    <h3>Learning Path</h3>
-    <ol>
-        <li>Learn HTML5 and CSS3</li>
-        <li>Understand JavaScript</li>
-        <li>Choose a backend language</li>
-        <li>Learn a framework</li>
-        <li>Study database design</li>
-        <li>Build RESTful APIs</li>
-        <li>Deploy to cloud</li>
-    </ol>
-
-    <h3>Technologies and Their Uses</h3>
-    <dl>
-        <dt>Django</dt>
-        <dd>High-level Python web framework promoting rapid development</dd>
-        <dt>Express.js</dt>
-        <dd>Minimalist web framework for Node.js applications</dd>
-        <dt>MongoDB</dt>
-        <dd>NoSQL document database for modern applications</dd>
-    </dl>
-</section>
-<section id="comparison">
-    <h2>Backend Technology Comparison</h2>
-    <table border="1" cellpadding="10" cellspacing="0">
-        <caption>Comparison of Popular Backend Technologies</caption>
-        <thead>
-            <tr>
-                <th>Technology</th>
-                <th>Type</th>
-                <th>Learning Curve</th>
-                <th>Use Case</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Node.js + Express</td>
-                <td>JavaScript Runtime + Framework</td>
-                <td>Moderate</td>
-                <td>Real-time apps, REST APIs</td>
-            </tr>
-            <tr>
-                <td>Python + Django</td>
-                <td>Language + Full-Stack Framework</td>
-                <td>Moderate</td>
-                <td>Content-heavy sites, admin panels</td>
-            </tr>
-            <tr>
-                <td>Python + Flask</td>
-                <td>Language + Micro-framework</td>
-                <td>Easy</td>
-                <td>Microservices, REST APIs</td>
-            </tr>
-            <tr>
-                <td>Java + Spring Boot</td>
-                <td>Language + Enterprise Framework</td>
-                <td>Steep</td>
-                <td>Enterprise applications, microservices</td>
-            </tr>
-        </tbody>
-        <tfoot>
-            <tr>
-                <td colspan="4">Table 1: Backend Technology Comparison</td>
-            </tr>
-        </tfoot>
-    </table>
-</section>
-<style>
-    table {
-        border-collapse: collapse;
-        width: 100%;
-        max-width: 800px;
-    }
-    th, td {
-        border: 1px solid #ddd;
-        padding: 12px;
-        text-align: left;
-    }
-    th {
-        background-color: #4CAF50;
-        color: white;
-    }
-    tr:nth-child(even) {
-        background-color: #f2f2f2;
-    }
-    tr:hover {
-        background-color: #ddd;
-    }
-    caption {
-        caption-side: bottom;
-        margin-top: 10px;
-        font-style: italic;
-    }
-</style>
-<style>
-    table {
-        border-collapse: collapse;
-        width: 100%;
-        max-width: 800px;
-    }
-    th, td {
-        border: 1px solid #ddd;
-        padding: 12px;
-        text-align: left;
-    }
-    th {
-        background-color: #4CAF50;
-        color: white;
-    }
-    tr:nth-child(even) {
-        background-color: #f2f2f2;
-    }
-    tr:hover {
-        background-color: #ddd;
-    }
-    caption {
-        caption-side: bottom;
-        margin-top: 10px;
-        font-style: italic;
-    }
-</style>
-<section id="multimedia">
-    <h2>Multimedia Content</h2>
-    
-    <article>
-        <h3>Images</h3>
-        <!-- Using picture element for responsive images -->
-        <picture>
-            <source media="(min-width: 800px)" srcset="https://via.placeholder.com/800x400/4CAF50/white?text=Backend+Development">
-            <source media="(min-width: 400px)" srcset="https://via.placeholder.com/400x200/4CAF50/white?text=Backend">
-            <img src="https://via.placeholder.com/200x100/4CAF50/white?text=Backend" alt="Backend Development Illustration">
-        </picture>
-        
-        <figure>
-            <img src="https://via.placeholder.com/300x200/2196F3/white?text=API" alt="API Illustration">
-            <figcaption>Figure 1: RESTful API Concept</figcaption>
-        </figure>
-    </article>
-
-    <article>
-        <h3>Audio</h3>
-        <audio controls>
-            <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
-            <source src="https://www.soundhelix.com/examples/ogg/SoundHelix-Song-1.ogg" type="audio/ogg">
-            Your browser does not support the audio element.
-        </audio>
-    </article>
-
-    <article>
-        <h3>Video</h3>
-        <video controls width="560" height="315">
-            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-            <source src="https://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg">
-            Your browser does not support the video tag.
-        </video>
-        <track kind="subtitles" src="subtitles.vtt" srclang="en" label="English">
-    </article>
-
-    <article>
-        <h3>Progress Indicators</h3>
-        <p>Course Progress: 
-            <progress value="45" max="100">45%</progress>
+        <p>
+            This webpage demonstrates the use of different HTML5 elements
+            in a single webpage.
         </p>
-        <p>Storage Used: 
-            <meter value="6" min="0" max="10">60%</meter>
+
+        <nav>
+            <a href="#home">Home</a> |
+            <a href="#text">Text</a> |
+            <a href="#lists">Lists</a> |
+            <a href="#table">Table</a> |
+            <a href="#form">Form</a> |
+            <a href="#media">Media</a> |
+            <a href="#interactive">Interactive</a>
+        </nav>
+
+        <hr>
+    </header>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main>
+
+        <!-- Home Section -->
+
+        <section id="home">
+
+            <h2>Introduction</h2>
+
+            <p>
+                <strong>HTML</strong> stands for
+                <em>HyperText Markup Language</em>.
+                It is used to create and structure content on web pages.
+            </p>
+
+            <p>
+                HTML5 introduced many useful semantic and multimedia elements
+                which make webpages easier to understand and maintain.
+            </p>
+
+            <article>
+
+                <h3>Why HTML is Useful in Backend Development</h3>
+
+                <p>
+                    Backend applications often generate or send HTML pages
+                    to users. HTML forms are also commonly used to collect
+                    information which can later be processed by a backend server.
+                </p>
+
+            </article>
+
+            <aside>
+                <p>
+                    <strong>Note:</strong>
+                    HTML defines the structure of a webpage while CSS is
+                    generally used for presentation and styling.
+                </p>
+            </aside>
+
+        </section>
+
+        <hr>
+
+
+        <!-- ================= TEXT FORMATTING ================= -->
+
+        <section id="text">
+
+            <h2>Text Formatting Elements</h2>
+
+            <p>This is a normal paragraph.</p>
+
+            <p>
+                This word is <b>bold</b>.
+            </p>
+
+            <p>
+                This text has <strong>strong importance</strong>.
+            </p>
+
+            <p>
+                This text is <i>italic</i>.
+            </p>
+
+            <p>
+                This text is <em>emphasized</em>.
+            </p>
+
+            <p>
+                This text is <u>underlined</u>.
+            </p>
+
+            <p>
+                This text is <mark>highlighted</mark>.
+            </p>
+
+            <p>
+                <small>This is smaller text.</small>
+            </p>
+
+            <p>
+                Old technology:
+                <del>Flash</del>
+
+                New technology:
+                <ins>HTML5</ins>
+            </p>
+
+            <p>
+                Water formula: H<sub>2</sub>O
+            </p>
+
+            <p>
+                Mathematical expression: x<sup>2</sup> + y<sup>2</sup>
+            </p>
+
+            <p>
+                API stands for
+                <abbr title="Application Programming Interface">API</abbr>.
+            </p>
+
+            <p>
+                Keyboard shortcut:
+                <kbd>Ctrl</kbd> + <kbd>S</kbd>
+                to save the file.
+            </p>
+
+            <p>
+                HTML code example:
+                <code>&lt;h1&gt;Hello World&lt;/h1&gt;</code>
+            </p>
+
+            <p>
+                Sample program output:
+                <samp>Hello World</samp>
+            </p>
+
+            <p>
+                Variable example:
+                <var>x</var> = 10
+            </p>
+
+            <blockquote>
+                Learning web development becomes easier when concepts are
+                implemented practically.
+            </blockquote>
+
+            <p>
+                My short quote:
+                <q>Practice improves programming skills.</q>
+            </p>
+
+            <pre>
+This is preformatted text.
+
+Spaces and
+line breaks are preserved.
+            </pre>
+
+            <address>
+                Student: Saksham Katiyar<br>
+                Course: Backend Development<br>
+                UPES
+            </address>
+
+        </section>
+
+        <hr>
+
+
+        <!-- ================= LISTS ================= -->
+
+        <section id="lists">
+
+            <h2>Different Types of Lists</h2>
+
+            <h3>Unordered List</h3>
+
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Node.js</li>
+            </ul>
+
+
+            <h3>Ordered List</h3>
+
+            <ol>
+                <li>Create the HTML file</li>
+                <li>Add HTML5 structure</li>
+                <li>Add webpage elements</li>
+                <li>Open the page in a browser</li>
+                <li>Test the output</li>
+            </ol>
+
+
+            <h3>Nested List</h3>
+
+            <ul>
+                <li>
+                    Frontend
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </li>
+
+                <li>
+                    Backend
+                    <ul>
+                        <li>Node.js</li>
+                        <li>Express.js</li>
+                        <li>Python</li>
+                    </ul>
+                </li>
+            </ul>
+
+
+            <h3>Description List</h3>
+
+            <dl>
+                <dt>HTML</dt>
+                <dd>Used for creating the structure of a webpage.</dd>
+
+                <dt>CSS</dt>
+                <dd>Used for styling webpages.</dd>
+
+                <dt>JavaScript</dt>
+                <dd>Used to add behaviour and interactivity.</dd>
+
+                <dt>Node.js</dt>
+                <dd>JavaScript runtime commonly used for backend development.</dd>
+            </dl>
+
+        </section>
+
+        <hr>
+
+
+        <!-- ================= LINKS ================= -->
+
+        <section>
+
+            <h2>Links</h2>
+
+            <p>
+                Visit
+                <a href="https://www.w3.org/" target="_blank">
+                    W3C
+                </a>
+                to learn more about web standards.
+            </p>
+
+            <p>
+                Send an email:
+                <a href="mailto:example@example.com">
+                    Contact
+                </a>
+            </p>
+
+        </section>
+
+        <hr>
+
+
+        <!-- ================= TABLE ================= -->
+
+        <section id="table">
+
+            <h2>HTML Table</h2>
+
+            <table border="1" cellpadding="8">
+
+                <caption>
+                    Backend Technologies
+                </caption>
+
+                <colgroup>
+                    <col>
+                    <col>
+                    <col>
+                </colgroup>
+
+                <thead>
+                    <tr>
+                        <th>Technology</th>
+                        <th>Type</th>
+                        <th>Use</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>HTML5</td>
+                        <td>Markup Language</td>
+                        <td>Webpage Structure</td>
+                    </tr>
+
+                    <tr>
+                        <td>Node.js</td>
+                        <td>Runtime</td>
+                        <td>Backend Development</td>
+                    </tr>
+
+                    <tr>
+                        <td>Express.js</td>
+                        <td>Framework</td>
+                        <td>Web APIs</td>
+                    </tr>
+
+                    <tr>
+                        <td>MongoDB</td>
+                        <td>Database</td>
+                        <td>Data Storage</td>
+                    </tr>
+
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <td colspan="3">
+                            Common technologies used in web development
+                        </td>
+                    </tr>
+                </tfoot>
+
+            </table>
+
+        </section>
+
+        <hr>
+
+
+        <!-- ================= FORM ================= -->
+
+        <section id="form">
+
+            <h2>HTML5 Registration Form</h2>
+
+            <form action="#" method="post">
+
+                <fieldset>
+
+                    <legend>Personal Information</legend>
+
+                    <p>
+                        <label for="name">Full Name:</label>
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Enter your name"
+                            required>
+                    </p>
+
+                    <p>
+                        <label for="email">Email:</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="example@email.com"
+                            required>
+                    </p>
+
+                    <p>
+                        <label for="password">Password:</label>
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            minlength="6">
+                    </p>
+
+                    <p>
+                        <label for="phone">Phone:</label>
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="9876543210">
+                    </p>
+
+                    <p>
+                        <label for="age">Age:</label>
+                        <input
+                            type="number"
+                            id="age"
+                            name="age"
+                            min="18"
+                            max="100">
+                    </p>
+
+                    <p>
+                        <label for="dob">Date of Birth:</label>
+                        <input
+                            type="date"
+                            id="dob"
+                            name="dob">
+                    </p>
+
+                    <p>
+                        <label for="time">Preferred Time:</label>
+                        <input
+                            type="time"
+                            id="time"
+                            name="time">
+                    </p>
+
+                    <p>
+                        <label for="month">Joining Month:</label>
+                        <input
+                            type="month"
+                            id="month"
+                            name="month">
+                    </p>
+
+                    <p>
+                        <label for="week">Preferred Week:</label>
+                        <input
+                            type="week"
+                            id="week"
+                            name="week">
+                    </p>
+
+                    <p>
+                        <label for="website">Portfolio URL:</label>
+                        <input
+                            type="url"
+                            id="website"
+                            name="website"
+                            placeholder="https://example.com">
+                    </p>
+
+                    <p>
+                        <label for="search">Search:</label>
+                        <input
+                            type="search"
+                            id="search"
+                            name="search"
+                            placeholder="Search technology">
+                    </p>
+
+                </fieldset>
+
+
+                <fieldset>
+
+                    <legend>Course Information</legend>
+
+                    <p>
+                        Experience Level:
+                    </p>
+
+                    <input
+                        type="radio"
+                        id="beginner"
+                        name="level"
+                        value="beginner">
+
+                    <label for="beginner">
+                        Beginner
+                    </label>
+
+                    <input
+                        type="radio"
+                        id="intermediate"
+                        name="level"
+                        value="intermediate">
+
+                    <label for="intermediate">
+                        Intermediate
+                    </label>
+
+
+                    <p>Topics Interested In:</p>
+
+                    <input
+                        type="checkbox"
+                        id="html"
+                        name="topic"
+                        value="HTML">
+
+                    <label for="html">
+                        HTML
+                    </label>
+
+                    <input
+                        type="checkbox"
+                        id="node"
+                        name="topic"
+                        value="NodeJS">
+
+                    <label for="node">
+                        Node.js
+                    </label>
+
+                    <input
+                        type="checkbox"
+                        id="database"
+                        name="topic"
+                        value="Database">
+
+                    <label for="database">
+                        Database
+                    </label>
+
+
+                    <p>
+                        <label for="course">
+                            Select Course:
+                        </label>
+
+                        <select id="course" name="course">
+
+                            <optgroup label="Frontend">
+                                <option value="html">HTML5</option>
+                                <option value="css">CSS</option>
+                                <option value="javascript">JavaScript</option>
+                            </optgroup>
+
+                            <optgroup label="Backend">
+                                <option value="node">Node.js</option>
+                                <option value="express">Express.js</option>
+                                <option value="python">Python</option>
+                            </optgroup>
+
+                        </select>
+                    </p>
+
+
+                    <p>
+                        <label for="technology">
+                            Choose Technology:
+                        </label>
+
+                        <input
+                            list="technologies"
+                            id="technology"
+                            name="technology">
+
+                        <datalist id="technologies">
+                            <option value="HTML5">
+                            <option value="JavaScript">
+                            <option value="Node.js">
+                            <option value="Express.js">
+                            <option value="MongoDB">
+                        </datalist>
+                    </p>
+
+
+                    <p>
+                        <label for="experience">
+                            Programming Experience:
+                        </label>
+
+                        <input
+                            type="range"
+                            id="experience"
+                            name="experience"
+                            min="0"
+                            max="10"
+                            value="3">
+
+                        <output>3 Years</output>
+                    </p>
+
+                </fieldset>
+
+
+                <fieldset>
+
+                    <legend>Additional Information</legend>
+
+                    <p>
+                        <label for="color">
+                            Favourite Colour:
+                        </label>
+
+                        <input
+                            type="color"
+                            id="color"
+                            name="color">
+                    </p>
+
+
+                    <p>
+                        <label for="file">
+                            Upload File:
+                        </label>
+
+                        <input
+                            type="file"
+                            id="file"
+                            name="file">
+                    </p>
+
+
+                    <p>
+                        <label for="message">
+                            Message:
+                        </label>
+                    </p>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="5"
+                        cols="40"
+                        placeholder="Write something here..."></textarea>
+
+                </fieldset>
+
+
+                <p>
+                    <input type="submit" value="Submit">
+
+                    <input type="reset" value="Reset">
+
+                    <button type="button">
+                        Normal Button
+                    </button>
+                </p>
+
+            </form>
+
+        </section>
+
+        <hr>
+
+
+        <!-- ================= PROGRESS AND METER ================= -->
+
+        <section>
+
+            <h2>Progress and Meter Elements</h2>
+
+            <p>
+                Experiment Completion:
+                <progress value="100" max="100">
+                    100%
+                </progress>
+            </p>
+
+            <p>
+                HTML Knowledge:
+                <meter
+                    min="0"
+                    max="10"
+                    value="8">
+                    8 out of 10
+                </meter>
+            </p>
+
+        </section>
+
+        <hr>
+
+
+        <!-- ================= MULTIMEDIA ================= -->
+
+        <section id="media">
+
+            <h2>Multimedia Elements</h2>
+
+
+            <article>
+
+                <h3>Image</h3>
+
+                <figure>
+
+                    <img
+                        src="https://via.placeholder.com/400x200?text=HTML5+Experiment"
+                        alt="HTML5 Experiment Sample Image"
+                        width="400"
+                        height="200">
+
+                    <figcaption>
+                        Figure 1: Sample image used in Experiment 1
+                    </figcaption>
+
+                </figure>
+
+            </article>
+
+
+            <article>
+
+                <h3>Picture Element</h3>
+
+                <picture>
+
+                    <source
+                        media="(min-width: 800px)"
+                        srcset="https://via.placeholder.com/600x250?text=Large+Screen">
+
+                    <source
+                        media="(min-width: 400px)"
+                        srcset="https://via.placeholder.com/400x200?text=Medium+Screen">
+
+                    <img
+                        src="https://via.placeholder.com/300x150?text=HTML5"
+                        alt="Responsive example image">
+
+                </picture>
+
+            </article>
+
+
+            <article>
+
+                <h3>Audio</h3>
+
+                <audio controls>
+
+                    <source
+                        src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
+                        type="audio/mpeg">
+
+                    Your browser does not support the audio element.
+
+                </audio>
+
+            </article>
+
+
+            <article>
+
+                <h3>Video</h3>
+
+                <video
+                    width="500"
+                    controls>
+
+                    <source
+                        src="https://www.w3schools.com/html/mov_bbb.mp4"
+                        type="video/mp4">
+
+                    Your browser does not support the video element.
+
+                </video>
+
+            </article>
+
+
+            <article>
+
+                <h3>Embedded Webpage</h3>
+
+                <iframe
+                    src="https://example.com"
+                    width="500"
+                    height="250"
+                    title="Example Website">
+                </iframe>
+
+            </article>
+
+        </section>
+
+        <hr>
+
+
+        <!-- ================= GRAPHICS ================= -->
+
+        <section>
+
+            <h2>HTML5 Graphics</h2>
+
+
+            <h3>Canvas</h3>
+
+            <canvas
+                id="myCanvas"
+                width="300"
+                height="100"
+                style="border:1px solid black;">
+
+                Your browser does not support canvas.
+
+            </canvas>
+
+
+            <h3>SVG</h3>
+
+            <svg width="300" height="120">
+
+                <rect
+                    x="10"
+                    y="10"
+                    width="120"
+                    height="70"
+                    fill="lightblue"
+                    stroke="black">
+                </rect>
+
+                <circle
+                    cx="200"
+                    cy="45"
+                    r="35"
+                    fill="lightgreen"
+                    stroke="black">
+                </circle>
+
+            </svg>
+
+        </section>
+
+        <hr>
+
+
+        <!-- ================= INTERACTIVE ================= -->
+
+        <section id="interactive">
+
+            <h2>Interactive Elements</h2>
+
+
+            <details>
+
+                <summary>
+                    What is HTML5?
+                </summary>
+
+                <p>
+                    HTML5 is the modern version of HTML used for structuring
+                    and presenting content on the web.
+                </p>
+
+            </details>
+
+
+            <br>
+
+
+            <details>
+
+                <summary>
+                    Course Outcomes
+                </summary>
+
+                <ol>
+                    <li>Understand backend development fundamentals</li>
+                    <li>Create web pages and applications</li>
+                    <li>Work with frameworks and APIs</li>
+                    <li>Understand web security concepts</li>
+                </ol>
+
+            </details>
+
+
+            <h3>Dialog Element</h3>
+
+            <button
+                type="button"
+                onclick="document.getElementById('infoDialog').showModal()">
+
+                Open Dialog
+
+            </button>
+
+
+            <dialog id="infoDialog">
+
+                <h3>HTML5 Dialog</h3>
+
+                <p>
+                    This is an example of the HTML5 dialog element.
+                </p>
+
+                <button
+                    type="button"
+                    onclick="document.getElementById('infoDialog').close()">
+
+                    Close
+
+                </button>
+
+            </dialog>
+
+        </section>
+
+        <hr>
+
+
+        <!-- ================= DATA AND TIME ================= -->
+
+        <section>
+
+            <h2>Other HTML5 Elements</h2>
+
+            <p>
+                Experiment Date:
+                <time datetime="2026-08-08">
+                    8 August 2026
+                </time>
+            </p>
+
+            <p>
+                Product ID:
+                <data value="HTML5-EXP-01">
+                    Experiment 01
+                </data>
+            </p>
+
+            <p>
+                LongWordExampleForWordBreak<wbr>Backend<wbr>Development
+            </p>
+
+            <p>
+                User name with bidirectional isolation:
+                <bdi>Saksham</bdi>
+            </p>
+
+            <p>
+                Right-to-left example:
+                <bdo dir="rtl">
+                    Backend Development
+                </bdo>
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <hr>
+
+        <p>
+            <strong>Experiment 1:</strong>
+            Create a Web Page with All Possible Elements of HTML5
         </p>
-    </article>
-</section>
+
+        <p>
+            Backend Development Lab
+        </p>
+
+        <p>
+            &copy; 2026 Saksham Katiyar
+        </p>
+
+    </footer>
 
 
-<!-- Aside - Represents tangentially related content -->
-<aside>
-    <!-- sidebar content -->
-</aside>
+    <!-- Small JavaScript only for Canvas -->
 
-<!-- Footer - Represents footer content -->
-<footer>
-    <!-- copyright, contact info -->
-</footer>
+    <script>
+        const canvas = document.getElementById("myCanvas");
+        const ctx = canvas.getContext("2d");
+
+        ctx.font = "20px Arial";
+        ctx.fillText("HTML5 Canvas", 70, 55);
+    </script>
+
 </body>
-</html>
 
+</html>
