@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>Course Timetable</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      padding: 12px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+
+    th {
+      background-color: #4CAF50;
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Course Timetable</h1>
+
+  <table>
+
+    <thead>
+      <tr>
+        <th>Day</th>
+        <th>Time</th>
+        <th>Subject</th>
+        <th>Faculty</th>
+      </tr>
+    </thead>
+
+    <tbody>
+
+      <% timetable.forEach(item => { %>
+
+        <tr>
+          <td><%= item.day %></td>
+          <td><%= item.time %></td>
+          <td><%= item.subject %></td>
+          <td><%= item.faculty %></td>
+        </tr>
+
+      <% }); %>
+
+    </tbody>
+
+  </table>
+
+</body>
+
+</html>
