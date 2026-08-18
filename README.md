@@ -1,6 +1,3 @@
-Replace your current `README.md` with this updated version:
-
-````markdown
 # Backend Development
 
 SAP ID: 590015169  
