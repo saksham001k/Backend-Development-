@@ -1,0 +1,22 @@
+{
+  "name": "exp12b",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+  "session": "node Source/session-example.js",
+  "cookie": "node Source/cookie-example.js",
+  "demo": "node Source/server.js",
+  "login": "node Login-System/app.js",
+  "todo": "node Todo-Session/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cookie-parser": "^1.4.7",
+    "express": "^5.2.1",
+    "express-session": "^1.19.0"
+  }
+}
