@@ -30,6 +30,7 @@ This repository contains the theory exercises and laboratory experiments complet
 | [Experiment 4](./LAB/Exp4/Report.md) | Responsive Pages with Bootstrap and Tailwind | ✅ Completed |
 | [Experiment 12A](./LAB/Exp12/Report.md) | Node.js, Express.js, EJS and Nodemon | ✅ Completed |
 | [Experiment 12B](./LAB/Exp12B/README.md) | Sessions and Cookies | ✅ Completed |
+| [Experiment 13A](./LAB/Exp13A/Report.md) | Express and Mongoose User Management | ✅ Completed |
 
 ## Main Technologies Used
 
@@ -59,7 +60,8 @@ Backend-Development-/
 │   ├── Exp3/
 │   ├── Exp4/
 │   ├── Exp12/
-│   └── Exp12B/
+│   ├── Exp12B/
+│   └── Exp13A/
 ├── Theory/
 │   ├── Task1/
 │   ├── Task2/
@@ -72,4 +74,4 @@ Backend-Development-/
 
 ## Progress
 
-The required laboratory work through Experiment 12B and theory work for Unit 1 are maintained in this repository.
+The required laboratory work through Experiment 13A and theory work for Unit 1 are maintained in this repository.
