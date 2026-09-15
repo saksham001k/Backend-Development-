@@ -1,0 +1,32 @@
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #202938;
+}
+
+header, main { max-width: 900px; margin: auto; padding: 24px; }
+header { background: #173b67; color: white; }
+h2 { color: #173b67; }
+.highlight { color: #176b3a; font-weight: bold; }
+#special { border-bottom: 2px dotted #6d4aff; }
+a[href] { color: #6d4aff; }
+
+.flex-row { display: flex; gap: 15px; }
+.card { flex: 1; padding: 25px; background: white; border: 1px solid #d7deea; }
+.grid-box { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+.grid-box div { padding: 20px; background: #dbeafe; }
+
+.animated-button {
+    margin-top: 24px;
+    padding: 12px 22px;
+    border: 0;
+    background: #173b67;
+    color: white;
+    transition: transform 0.25s, background 0.25s;
+    animation: appear 0.7s ease;
+}
+.animated-button:hover { background: #6d4aff; transform: translateY(-3px); }
+@keyframes appear { from { opacity: 0; } to { opacity: 1; } }

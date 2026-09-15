@@ -1,167 +1,66 @@
 # Backend Development
 
-SAP ID: 590015169  
-Course: Backend Development
+**Name:** Saksham Katiyar
 
-This repository contains theory work and laboratory experiments completed as part of the Backend Development course.
+**SAP ID:** 590015169
 
----
+**Course:** Backend Development
 
-## 📚 Theory
+This repository contains the theory exercises and laboratory experiments completed during the Backend Development course.
 
-Theory and classroom work related to Backend Development will be maintained inside the `Theory` directory.
+## Theory — Unit 1
 
----
+| Task | Topic | Status |
+|---|---|---|
+| [Task 1](./Theory/Task1/) | Node.js and Express Environment | ✅ Completed |
+| [Task 2](./Theory/Task2/) | HTTP Requests and Flask API | ✅ Completed |
+| [Task 3](./Theory/Task3/) | RESTful APIs with FastAPI | ✅ Completed |
+| [Task 4](./Theory/Task4/) | Sessions, Cookies and Query Strings | ✅ Completed |
+| [Task 5](./Theory/Task5/) | LocalStorage, SessionStorage and JSON | ✅ Completed |
+| [Task 6](./Theory/Task6/) | Server-Side Rendering with EJS and Jinja2 | ✅ Completed |
 
-## 🧪 Laboratory Experiments
+## Laboratory Experiments
 
 | Experiment | Title | Status |
 |---|---|---|
-| [Experiment 1](./LAB/Exp1/Report.md) | Create a Web Page with All Possible Elements of HTML5 | ✅ Completed |
-| [Experiment 12](./LAB/Exp12/Report.md) | Node.js, Express.js, and EJS Templating | ✅ Completed |
+| [Experiment 0](./LAB/Exp0/Report.md) | Git Basics | ✅ Completed |
+| [Experiment 1](./LAB/Exp1/Report.md) | HTML5 Elements | ✅ Completed |
+| [Experiment 2](./LAB/Exp2/Report.md) | Types of Cascading Style Sheets | ✅ Completed |
+| [Experiment 3](./LAB/Exp3/Report.md) | Responsive Web Page with HTML and CSS | ✅ Completed |
+| [Experiment 4](./LAB/Exp4/Report.md) | Responsive Pages with Bootstrap and Tailwind | ✅ Completed |
+| [Experiment 12A](./LAB/Exp12/Report.md) | Node.js, Express.js, EJS and Nodemon | ✅ Completed |
+| [Experiment 12B](./LAB/Exp12B/README.md) | Sessions and Cookies | ✅ Completed |
 
----
+## Main Technologies Used
 
-## 📁 Repository Structure
+- HTML5, CSS3, Bootstrap and Tailwind CSS
+- JavaScript, Node.js, Express.js and EJS
+- Python, Flask, FastAPI and Jinja2
+- Git and GitHub
+- REST APIs, sessions, cookies and browser storage
+
+## Repository Structure
 
 ```text
 Backend-Development-/
-│
-├── README.md
+├── LAB/
+│   ├── Exp0/
+│   ├── Exp1/
+│   ├── Exp2/
+│   ├── Exp3/
+│   ├── Exp4/
+│   ├── Exp12/
+│   └── Exp12B/
 ├── Theory/
-│
-└── LAB/
-    │
-    ├── Exp1/
-    │   ├── index.html
-    │   └── Report.md
-    │
-    └── Exp12/
-        ├── .gitignore
-        ├── app.js
-        ├── script.js
-        ├── package.json
-        ├── package-lock.json
-        ├── nodemon.json
-        ├── Report.md
-        └── views/
-            ├── home.ejs
-            ├── users.ejs
-            ├── profile.ejs
-            ├── timetable.ejs
-            ├── register.ejs
-            └── result.ejs
-````
-
----
-
-## ✅ Experiment 1
-
-### Title
-
-Create a Web Page with All Possible Elements of HTML5
-
-### Objective
-
-To understand and implement various HTML5 elements including semantic elements, text formatting, lists, tables, forms, multimedia, and interactive elements.
-
-### Files
-
-* [`index.html`](./LAB/Exp1/index.html) — HTML implementation
-* [`Report.md`](./LAB/Exp1/Report.md) — Experiment report
-
-### Status
-
-Completed
-
----
-
-## ✅ Experiment 12
-
-### Title
-
-Node.js, Express.js, and EJS Templating
-
-### Objective
-
-To understand and implement server-side JavaScript using Node.js, create web servers and APIs using Express.js, handle HTTP requests and responses, work with URL and query parameters, process POST data, implement EJS templating, and use Nodemon for automatic server restart during development.
-
-### Concepts Implemented
-
-* Node.js and NPM
-* Express.js server
-* HTTP request and response handling
-* Text, HTML, and JSON responses
-* Route parameters
-* Query parameters
-* POST request handling
-* Calculator API
-* Student management routes
-* EJS templating
-* Dynamic data rendering
-* Course timetable using EJS
-* Student registration form
-* Nodemon auto-restart
-
-### Main Routes
-
-```text
-GET  /
-GET  /text
-GET  /html
-GET  /json
-
-GET  /user/:id
-GET  /product/:category/:id
-
-GET  /search
-GET  /calculate
-
-POST /register
-POST /login
-
-GET  /home
-GET  /users
-GET  /profile/:id
-
-GET  /student/text
-GET  /student/html
-GET  /student/json
-
-GET  /students
-GET  /students/:id
-POST /students/add
-
-GET  /timetable
-
-GET  /registration
-POST /registration
+│   ├── Task1/
+│   ├── Task2/
+│   ├── Task3/
+│   ├── Task4/
+│   ├── Task5/
+│   └── Task6/
+└── README.md
 ```
 
-### Files
+## Progress
 
-* [`app.js`](./LAB/Exp12/app.js) — Main Express.js application
-* [`script.js`](./LAB/Exp12/script.js) — Basic Node.js program
-* [`package.json`](./LAB/Exp12/package.json) — Project configuration and dependencies
-* [`nodemon.json`](./LAB/Exp12/nodemon.json) — Nodemon configuration
-* [`views/`](./LAB/Exp12/views/) — EJS templates
-* [`Report.md`](./LAB/Exp12/Report.md) — Complete experiment report
-
-### EJS Templates
-
-* `home.ejs`
-* `users.ejs`
-* `profile.ejs`
-* `timetable.ejs`
-* `register.ejs`
-* `result.ejs`
-
-### Status
-
-Completed
-
----
-
-## 📌 Progress
-
-This repository will be updated regularly with new theory topics, laboratory experiments, improvements, and corrections throughout the Backend Development course.
+The required laboratory work through Experiment 12B and theory work for Unit 1 are maintained in this repository.

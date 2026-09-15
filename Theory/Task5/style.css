@@ -1,0 +1,12 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, sans-serif; background: #edf2f7; color: #1f2937; }
+main { width: min(720px, 92%); margin: 40px auto; background: white; padding: 28px; border-radius: 10px; }
+form { display: flex; gap: 10px; }
+input { width: 100%; padding: 11px; border: 1px solid #b8c2cf; border-radius: 5px; }
+button { border: 0; padding: 10px 16px; border-radius: 5px; background: #185a9d; color: white; cursor: pointer; }
+#searchInput { margin: 18px 0; }
+.note { border: 1px solid #d8dee8; padding: 14px; margin-top: 10px; border-radius: 6px; }
+.note p { margin-top: 0; }
+.note small { color: #64748b; }
+.note button { margin: 10px 6px 0 0; }
+.note .delete { background: #b42318; }

@@ -1,0 +1,11 @@
+git init
+git status
+git add .
+git commit -m "Initial commit"
+git checkout -b feature-demo
+git checkout main
+git merge feature-demo
+git stash
+git stash pop
+git remote -v
+git log --oneline

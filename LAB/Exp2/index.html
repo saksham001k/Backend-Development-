@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 2 - CSS Types</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .internal-note { background: #fff3cd; padding: 12px; border-left: 4px solid #e5a000; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>CSS Learning Page</h1>
+        <p style="color: #b42318;">This line uses inline CSS.</p>
+    </header>
+
+    <main>
+        <p class="internal-note">This box is styled using internal CSS.</p>
+
+        <section>
+            <h2>CSS Selectors</h2>
+            <p class="highlight">Class selector example</p>
+            <p id="special">ID selector example</p>
+            <a href="https://developer.mozilla.org/">Attribute selector example</a>
+        </section>
+
+        <section>
+            <h2>Flexbox Layout</h2>
+            <div class="flex-row">
+                <article class="card">HTML</article>
+                <article class="card">CSS</article>
+                <article class="card">JavaScript</article>
+            </div>
+        </section>
+
+        <section>
+            <h2>Grid Layout</h2>
+            <div class="grid-box">
+                <div>Node.js</div><div>Express</div><div>FastAPI</div><div>MongoDB</div>
+            </div>
+        </section>
+
+        <button class="animated-button">Hover Here</button>
+    </main>
+</body>
+</html>
