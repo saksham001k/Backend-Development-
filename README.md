@@ -39,10 +39,19 @@ This repository contains the theory exercises and laboratory experiments complet
 - Git and GitHub
 - REST APIs, sessions, cookies and browser storage
 
+## Separate Mini Applications
+
+| Application | Description | Status |
+|---|---|---|
+| [Notes App](./Notes/) | Add, view and delete notes using localStorage | ✅ Completed |
+| [To-Do List](./Todo/) | Add, complete and delete tasks using localStorage | ✅ Completed |
+
 ## Repository Structure
 
 ```text
 Backend-Development-/
+├── Notes/
+├── Todo/
 ├── LAB/
 │   ├── Exp0/
 │   ├── Exp1/
