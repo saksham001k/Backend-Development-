@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Notes</title>
+  
+</head>
+<body>
+  <h1>My Notes</h1>
+  <p><a href="/notes/new">Add a Note</a></p>
+  <p>My notes stored in MongoDB.</p>
+
+  <% if (notes.length === 0) { %>
+    <p>No notes available.</p>
+  <% } else { %>
+    <% notes.forEach(note => { %>
+      <article>
+        <h2><%= note.title %></h2>
+        <p class="note-content"><%= note.content %></p>
+        <p>Category: <%= note.category %></p>
+        <p>
+          Created:
+          <%= new Date(note.createdAt).toLocaleString() %>
+        </p>
+        <form action="/notes/<%= note._id %>/delete" method="POST">
+            <button type="submit" class="delete-button">Delete</button>
+        </form>
+        <hr>
+      </article>
+    <% }); %>
+  <% } %>
+</body>
+</html>

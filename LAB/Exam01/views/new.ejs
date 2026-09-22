@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Note</title>
+</head>
+<body>
+  <h1>Add a Note</h1>
+
+  <% if (error) { %>
+    <p role="alert"><%= error %></p>
+  <% } %>
+
+  <form action="/notes" method="POST">
+    <p>
+      <label for="title">Title</label><br>
+      <input
+        id="title"
+        name="title"
+        type="text"
+        value="<%= values.title %>"
+        required
+      >
+    </p>
+
+    <p>
+      <label for="content">Content</label><br>
+      <textarea
+        id="content"
+        name="content"
+        rows="5"
+        required
+      ><%= values.content %></textarea>
+    </p>
+
+    <p>
+      <label for="category">Category</label><br>
+      <input
+        id="category"
+        name="category"
+        type="text"
+        value="<%= values.category %>"
+        placeholder="Study, Personal, Work"
+      >
+    </p>
+
+    <button type="submit">Save Note</button>
+  </form>
+
+  <p><a href="/">Back to notes</a></p>
+</body>
+</html>
