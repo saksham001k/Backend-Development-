@@ -73,7 +73,6 @@ Open http://localhost:3000. Use `npm run dev` for automatic restart during devel
 - `.env.example`: non-secret connection example
 - `package.json` and `package-lock.json`: dependencies and run commands
 - `screenshot.png`: rendered application screenshot
-- [VIVA.md](./VIVA.md): focused explanation and questions
 
 The private `.env` and `node_modules` are ignored by Git.
 
