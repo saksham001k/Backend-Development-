@@ -8,6 +8,14 @@
 
 This repository contains the theory exercises and laboratory experiments completed during the Backend Development course.
 
+## Current viva — Exam01 My Notes
+
+[Open Exam01](./LAB/Exam01/README.md) · [Viva preparation](./LAB/Exam01/VIVA.md) · [Application screenshot](./LAB/Exam01/screenshot.png)
+
+The current viva focuses on Exam01: a notes application using Express, EJS and MongoDB. All compulsory features are implemented, with CSS as the optional interface enhancement. Source, templates, configuration example, execution instructions and a screenshot are included.
+
+Local practice confirmed MongoDB connectivity and persistence. The uploaded code also passed 12 isolated route checks; see the Exam01 README for the verification scope and screenshot provenance. PostgreSQL and authentication are not required for Exam01.
+
 ## Theory — Unit 1
 
 | Task | Topic | Status |
@@ -23,6 +31,7 @@ This repository contains the theory exercises and laboratory experiments complet
 
 | Experiment | Title | Status |
 |---|---|---|
+| [Exam01](./LAB/Exam01/README.md) | My Notes with Express, EJS and MongoDB | ✅ Implemented and documented |
 | [Experiment 0](./LAB/Exp0/Report.md) | Git Basics | ✅ Completed |
 | [Experiment 1](./LAB/Exp1/Report.md) | HTML5 Elements | ✅ Completed |
 | [Experiment 2](./LAB/Exp2/Report.md) | Types of Cascading Style Sheets | ✅ Completed |
@@ -39,6 +48,7 @@ This repository contains the theory exercises and laboratory experiments complet
 - Python, Flask, FastAPI and Jinja2
 - Git and GitHub
 - REST APIs, sessions, cookies and browser storage
+- MongoDB with the native Node.js driver and Mongoose
 
 ## Separate Mini Applications
 
@@ -54,6 +64,7 @@ Backend-Development-/
 ├── Notes/
 ├── Todo/
 ├── LAB/
+│   ├── Exam01/
 │   ├── Exp0/
 │   ├── Exp1/
 │   ├── Exp2/
@@ -75,3 +86,7 @@ Backend-Development-/
 ## Progress
 
 The required laboratory work through Experiment 13A and theory work for Unit 1 are maintained in this repository.
+
+## Work log
+
+- 22 September 2026: Added Exam01 notes application, validated its required flows, added execution scripts, screenshot and focused viva preparation. Updated the coursework portal with Exam01 links.
