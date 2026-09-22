@@ -10,7 +10,7 @@ This repository contains the theory exercises and laboratory experiments complet
 
 ## Current viva — Exam01 My Notes
 
-[Open Exam01](./LAB/Exam01/README.md) · [Viva preparation](./LAB/Exam01/VIVA.md) · [Application screenshot](./LAB/Exam01/screenshot.png)
+[Open Exam01](./LAB/Exam01/README.md) · [Application screenshot](./LAB/Exam01/screenshot.png)
 
 The current viva focuses on Exam01: a notes application using Express, EJS and MongoDB. All compulsory features are implemented, with CSS as the optional interface enhancement. Source, templates, configuration example, execution instructions and a screenshot are included.
 
@@ -89,4 +89,4 @@ The required laboratory work through Experiment 13A and theory work for Unit 1 a
 
 ## Work log
 
-- 22 September 2026: Added Exam01 notes application, validated its required flows, added execution scripts, screenshot and focused viva preparation. Updated the coursework portal with Exam01 links.
+- 22 September 2026: Added Exam01 notes application, validated its required flows, added execution scripts, screenshot and submission documentation. Updated the coursework portal with Exam01 links.
