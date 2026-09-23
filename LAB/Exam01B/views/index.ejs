@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eisenhower Todo</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>Eisenhower Todo</h1>
+  <p>My tasks arranged by urgency and importance.</p>
+  <p><a href="/tasks/new">Add a task</a></p>
+  <main class="matrix">
+    <% quadrants.forEach(quadrant => { %>
+      <section class="quadrant">
+        <h2><%= quadrant.title %></h2>
+        <p><%= quadrant.description %></p>
+        <% if (quadrant.tasks.length === 0) { %>
+          <p>No tasks available.</p>
+        <% } %>
+        <% quadrant.tasks.forEach(task => { %>
+          <article>
+            <h3><%= task.title %></h3>
+            <p class="task-description"><%= task.description %></p>
+            <p><small>Created: <%= new Date(task.createdAt).toLocaleString() %></small></p>
+            <form action="/tasks/<%= task._id %>/delete" method="POST">
+              <button class="delete-button" type="submit">Delete</button>
+            </form>
+          </article>
+        <% }); %>
+      </section>
+    <% }); %>
+  </main>
+  <footer><p>Saksham Katiyar · SAP ID: 590015169</p></footer>
+</body>
+</html>

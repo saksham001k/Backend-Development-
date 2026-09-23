@@ -8,11 +8,17 @@
 
 This repository contains the theory exercises and laboratory experiments completed during the Backend Development course.
 
-## Current viva — Exam01 My Notes
+## Lab examinations
+
+[Open Exam01B — Eisenhower Todo](./LAB/Exam01B/README.md)
+
+Exam01B uses Express, EJS and MongoDB to add tasks, group them by urgency and importance, and delete them. CSS Grid is the chosen bonus. Source and setup instructions are included. Live database verification and the required screenshot are pending local execution.
+
+### Exam01 — My Notes
 
 [Open Exam01](./LAB/Exam01/README.md) · [Application screenshot](./LAB/Exam01/screenshot.png)
 
-The current viva focuses on Exam01: a notes application using Express, EJS and MongoDB. All compulsory features are implemented, with CSS as the optional interface enhancement. Source, templates, configuration example, execution instructions and a screenshot are included.
+Exam01 is a notes application using Express, EJS and MongoDB. All compulsory features are implemented, with CSS as the optional interface enhancement. Source, templates, configuration example, execution instructions and a screenshot are included.
 
 Local practice confirmed MongoDB connectivity and persistence. The uploaded code also passed 12 isolated route checks; see the Exam01 README for the verification scope and screenshot provenance. PostgreSQL and authentication are not required for Exam01.
 
@@ -31,6 +37,7 @@ Local practice confirmed MongoDB connectivity and persistence. The uploaded code
 
 | Experiment | Title | Status |
 |---|---|---|
+| [Exam01B](./LAB/Exam01B/README.md) | Eisenhower Todo with Express, EJS and MongoDB | ✅ Implemented and documented |
 | [Exam01](./LAB/Exam01/README.md) | My Notes with Express, EJS and MongoDB | ✅ Implemented and documented |
 | [Experiment 0](./LAB/Exp0/Report.md) | Git Basics | ✅ Completed |
 | [Experiment 1](./LAB/Exp1/Report.md) | HTML5 Elements | ✅ Completed |
@@ -65,6 +72,7 @@ Backend-Development-/
 ├── Todo/
 ├── LAB/
 │   ├── Exam01/
+│   ├── Exam01B/
 │   ├── Exp0/
 │   ├── Exp1/
 │   ├── Exp2/
@@ -90,3 +98,5 @@ The required laboratory work through Experiment 13A and theory work for Unit 1 a
 ## Work log
 
 - 22 September 2026: Added Exam01 notes application, validated its required flows, added execution scripts, screenshot and submission documentation. Updated the coursework portal with Exam01 links.
+
+- 23 September 2026: Added Exam01B Eisenhower Todo, required templates, CSS Grid, execution instructions. Checked the task flows with an isolated collection double.
