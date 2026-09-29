@@ -44,6 +44,7 @@ Local practice confirmed MongoDB connectivity and persistence. The uploaded code
 | [Experiment 2](./LAB/Exp2/Report.md) | Types of Cascading Style Sheets | ✅ Completed |
 | [Experiment 3](./LAB/Exp3/Report.md) | Responsive Web Page with HTML and CSS | ✅ Completed |
 | [Experiment 4](./LAB/Exp4/Report.md) | Responsive Pages with Bootstrap and Tailwind | ✅ Completed |
+| [Experiment 5](./LAB/Exp5/Report.md) | JavaScript Arrays, Objects and Functions | ✅ Completed |
 | [Experiment 12A](./LAB/Exp12/Report.md) | Node.js, Express.js, EJS and Nodemon | ✅ Completed |
 | [Experiment 12B](./LAB/Exp12B/README.md) | Sessions and Cookies | ✅ Completed |
 | [Experiment 13A](./LAB/Exp13A/Report.md) | Express and Mongoose User Management | ✅ Completed |
@@ -78,6 +79,7 @@ Backend-Development-/
 │   ├── Exp2/
 │   ├── Exp3/
 │   ├── Exp4/
+│   ├── Exp5/
 │   ├── Exp12/
 │   ├── Exp12B/
 │   └── Exp13A/
@@ -100,3 +102,5 @@ The required laboratory work through Experiment 13A and theory work for Unit 1 a
 - 22 September 2026: Added Exam01 notes application, validated its required flows, added execution scripts, screenshot and submission documentation. Updated the coursework portal with Exam01 links.
 
 - 23 September 2026: Added Exam01B Eisenhower Todo, required templates, CSS Grid, execution instructions. Checked the task flows with an isolated collection double.
+
+- 29 September 2026: Completed Experiment 5 JavaScript demonstrations and library PBL, verified Node.js output, and updated the coursework portal.
