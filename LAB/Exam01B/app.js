@@ -138,7 +138,7 @@ async function startServer() {
     console.log("MongoDB connected successfully");
 
     app.listen(PORT, () => {
-      console.log(`Eisenhower Todo: http://localhost:${PORT}`);
+      console.log(`TODO APP: http://localhost:${PORT}`);
     });
   } catch (error) {
     console.error("Startup failed:", error.message);
