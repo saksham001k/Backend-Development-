@@ -9,6 +9,7 @@ To set up Node.js and Express and create routes that return text, HTML, JSON and
 - Node.js project initialized with NPM
 - Express server configured
 - Home and student routes created
+- `/text`, `/html` and `/json` routes return their respective response types
 - Student data rendered using EJS templates
 - Project dependencies stored in `package.json`
 

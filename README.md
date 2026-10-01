@@ -22,6 +22,13 @@ Exam01 is a notes application using Express, EJS and MongoDB. All compulsory fea
 
 Local practice confirmed MongoDB connectivity and persistence. The uploaded code also passed 12 isolated route checks; see the Exam01 README for the verification scope and screenshot provenance. PostgreSQL and authentication are not required for Exam01.
 
+## Assignments
+
+| Assignment | Work | Status |
+|---|---|---|
+| [Assignment 1](./Assignment/Assignment1/) | Notes App using HTML, CSS, JavaScript and localStorage | ✅ Completed |
+| [Assignment 2](./Assignment/Assignment2.md) | PostgreSQL JSONB and equivalent MongoDB queries | ✅ Written; local database timings to record |
+
 ## Theory — Unit 1
 
 | Task | Topic | Status |
@@ -62,14 +69,15 @@ Local practice confirmed MongoDB connectivity and persistence. The uploaded code
 
 | Application | Description | Status |
 |---|---|---|
-| [Notes App](./Notes/) | Add, view and delete notes using localStorage | ✅ Completed |
 | [To-Do List](./Todo/) | Add, complete and delete tasks using localStorage | ✅ Completed |
 
 ## Repository Structure
 
 ```text
 Backend-Development-/
-├── Notes/
+├── Assignment/
+│   ├── Assignment1/  (Notes App)
+│   └── Assignment2.md
 ├── Todo/
 ├── LAB/
 │   ├── Exam01/
@@ -95,7 +103,7 @@ Backend-Development-/
 
 ## Progress
 
-The required laboratory work through Experiment 13A and theory work for Unit 1 are maintained in this repository.
+The required laboratory work through Experiment 13A, all six Unit 1 theory tasks, and the two assignments are maintained in this repository. Assignment 2 includes commands for a local PostgreSQL and MongoDB run; its EXPLAIN ANALYZE timings are pending that run.
 
 ## Work log
 
@@ -104,3 +112,5 @@ The required laboratory work through Experiment 13A and theory work for Unit 1 a
 - 23 September 2026: Added Exam01B Eisenhower Todo, required templates, CSS Grid, execution instructions. Checked the task flows with an isolated collection double.
 
 - 29 September 2026: Completed Experiment 5 JavaScript demonstrations and library PBL, verified Node.js output, and updated the coursework portal.
+
+- 1 October 2026: Moved the browser Notes App into Assignment 1, added Assignment 2 PostgreSQL JSONB and MongoDB work, and checked Unit 1 task reports and source files.

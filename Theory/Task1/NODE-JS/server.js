@@ -17,6 +17,18 @@ app.get("/students", (req, res) => {
     res.render("students", { students: students });
 });
 
+app.get("/text", (req, res) => {
+    res.type("text").send("Backend Development");
+});
+
+app.get("/html", (req, res) => {
+    res.send("<h1>Backend Development</h1>");
+});
+
+app.get("/json", (req, res) => {
+    res.json(students);
+});
+
 app.listen(3000, () => {
     console.log("Server started at http://localhost:3000");
 });
