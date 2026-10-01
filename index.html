@@ -1,23 +1,531 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Backend Development — Saksham Katiyar</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Saksham Katiyar's Backend Development coursework portal for UPES.">
+  <meta name="theme-color" content="#0b1739">
+  <title>Backend Development Coursework | Saksham Katiyar</title>
   <style>
-    body { font-family: system-ui, sans-serif; max-width: 720px; margin: 3rem auto; padding: 0 1rem; line-height: 1.6; }
-    a { color: #1356a2; }
+    :root {
+      --navy: #0b1739;
+      --navy-soft: #15254d;
+      --blue: #2563eb;
+      --blue-soft: #eaf1ff;
+      --cyan: #06b6d4;
+      --green: #16a34a;
+      --ink: #172033;
+      --muted: #64748b;
+      --line: #dce5f2;
+      --surface: #ffffff;
+      --background: #f5f8fd;
+      --shadow: 0 18px 45px rgba(15, 32, 68, 0.10);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--background);
+      color: var(--ink);
+      line-height: 1.6;
+    }
+    body.dark {
+      --ink: #e7edf8;
+      --muted: #9cabc1;
+      --line: #263653;
+      --surface: #101c35;
+      --background: #081226;
+      --blue-soft: #142b55;
+      --shadow: 0 18px 45px rgba(0, 0, 0, 0.26);
+    }
+    a { color: inherit; }
+    button, input { font: inherit; }
+    .container { width: min(1120px, calc(100% - 36px)); margin: 0 auto; }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(11, 23, 57, 0.94);
+      color: #fff;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(14px);
+    }
+    .nav-wrap { height: 70px; display: flex; align-items: center; justify-content: space-between; gap: 22px; }
+    .brand { display: flex; align-items: center; gap: 11px; text-decoration: none; font-weight: 750; letter-spacing: -0.02em; }
+    .brand-mark {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border-radius: 11px;
+      background: linear-gradient(135deg, var(--blue), var(--cyan));
+      box-shadow: 0 8px 22px rgba(37, 99, 235, 0.35);
+    }
+    .nav-links { display: flex; align-items: center; gap: 23px; }
+    .nav-links a { color: #d9e5ff; text-decoration: none; font-size: 0.92rem; }
+    .nav-links a:hover { color: #fff; }
+    .theme-toggle {
+      width: 38px;
+      height: 38px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 82px 0 76px;
+      color: #fff;
+      background:
+        radial-gradient(circle at 85% 12%, rgba(6, 182, 212, 0.22), transparent 30%),
+        radial-gradient(circle at 15% 80%, rgba(37, 99, 235, 0.23), transparent 32%),
+        linear-gradient(135deg, #08132e 0%, #0d2450 58%, #0a3550 100%);
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: 0.12;
+      background-image: linear-gradient(rgba(255,255,255,.16) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.16) 1px, transparent 1px);
+      background-size: 42px 42px;
+      mask-image: linear-gradient(to bottom, black, transparent 90%);
+    }
+    .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.25fr 0.75fr; align-items: center; gap: 60px; }
+    .eyebrow { margin: 0 0 12px; color: #7dd3fc; font-size: 0.78rem; font-weight: 800; letter-spacing: 0.16em; text-transform: uppercase; }
+    .hero h1 { max-width: 720px; margin: 0; font-size: clamp(2.6rem, 6vw, 4.65rem); line-height: 1.02; letter-spacing: -0.05em; }
+    .hero h1 span { color: #67e8f9; }
+    .hero-copy { max-width: 640px; margin: 23px 0 29px; color: #c8d8f4; font-size: 1.07rem; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 11px 17px; border: 1px solid transparent; border-radius: 10px; font-weight: 700; text-decoration: none; transition: transform .2s, background .2s, border-color .2s; }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { background: #fff; color: var(--navy); }
+    .btn-secondary { border-color: rgba(255,255,255,.28); background: rgba(255,255,255,.08); color: #fff; }
+
+    .repo-card { padding: 22px; border: 1px solid rgba(255,255,255,.15); border-radius: 18px; background: rgba(5, 15, 38, .62); box-shadow: 0 25px 70px rgba(0,0,0,.28); backdrop-filter: blur(12px); }
+    .repo-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-bottom: 16px; border-bottom: 1px solid rgba(255,255,255,.12); }
+    .repo-name { font-weight: 750; }
+    .live-badge { display: inline-flex; align-items: center; gap: 7px; color: #bbf7d0; font-size: .78rem; }
+    .live-dot { width: 8px; height: 8px; border-radius: 50%; background: #22c55e; box-shadow: 0 0 0 4px rgba(34,197,94,.14); }
+    .code-lines { margin: 18px 0 0; padding: 0; list-style: none; color: #b9c9e8; font: .86rem/1.85 ui-monospace, SFMono-Regular, Menlo, monospace; }
+    .code-lines strong { color: #67e8f9; font-weight: 600; }
+
+    .stats { position: relative; z-index: 3; margin-top: -31px; display: grid; grid-template-columns: repeat(4, 1fr); background: var(--surface); border: 1px solid var(--line); border-radius: 16px; box-shadow: var(--shadow); }
+    .stat { padding: 21px 24px; border-right: 1px solid var(--line); }
+    .stat:last-child { border-right: 0; }
+    .stat strong { display: block; color: var(--blue); font-size: 1.65rem; line-height: 1.1; }
+    .stat span { color: var(--muted); font-size: .82rem; }
+
+    main { padding: 72px 0 50px; }
+    .section-head { display: flex; align-items: end; justify-content: space-between; gap: 24px; margin-bottom: 24px; }
+    .section-head h2 { margin: 0 0 5px; font-size: clamp(1.7rem, 3vw, 2.25rem); letter-spacing: -0.035em; }
+    .section-head p { margin: 0; color: var(--muted); }
+    .text-link { color: var(--blue); font-weight: 700; text-decoration: none; white-space: nowrap; }
+
+    .course-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-bottom: 72px; }
+    .course-card { position: relative; overflow: hidden; min-height: 225px; padding: 24px; background: var(--surface); border: 1px solid var(--line); border-radius: 15px; box-shadow: 0 10px 28px rgba(15,32,68,.05); }
+    .course-card::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 4px; background: var(--accent, var(--blue)); }
+    .course-icon { width: 42px; height: 42px; display: grid; place-items: center; margin-bottom: 18px; border-radius: 12px; background: var(--icon-bg, var(--blue-soft)); font-size: 1.2rem; }
+    .course-card h3 { margin: 0 0 8px; font-size: 1.08rem; }
+    .course-card p { margin: 0 0 20px; color: var(--muted); font-size: .9rem; }
+    .progress-label { display: flex; justify-content: space-between; margin-bottom: 7px; color: var(--muted); font-size: .75rem; }
+    .progress { height: 7px; overflow: hidden; background: var(--line); border-radius: 99px; }
+    .progress span { display: block; height: 100%; width: var(--progress); border-radius: inherit; background: var(--accent, var(--blue)); }
+
+    .explorer { overflow: hidden; background: var(--surface); border: 1px solid var(--line); border-radius: 18px; box-shadow: var(--shadow); }
+    .explorer-bar { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 18px 20px; border-bottom: 1px solid var(--line); background: color-mix(in srgb, var(--surface) 91%, var(--blue) 9%); }
+    .connection { display: flex; align-items: center; gap: 10px; min-width: 0; }
+    .connection strong { display: block; font-size: .92rem; }
+    .connection small { display: block; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .search { width: min(280px, 42vw); padding: 9px 12px; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 9px; outline: none; }
+    .search:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(37,99,235,.11); }
+    .breadcrumbs { display: flex; flex-wrap: wrap; align-items: center; gap: 5px; min-height: 51px; padding: 11px 20px; border-bottom: 1px solid var(--line); }
+    .crumb { padding: 4px 7px; border: 0; background: transparent; color: var(--blue); cursor: pointer; font-weight: 650; }
+    .crumb-sep { color: var(--muted); }
+    .file-list { min-height: 300px; }
+    .file-row { display: grid; grid-template-columns: minmax(0, 1fr) 120px 100px; align-items: center; gap: 12px; min-height: 59px; padding: 10px 20px; border-bottom: 1px solid var(--line); text-decoration: none; transition: background .16s; }
+    .file-row:last-child { border-bottom: 0; }
+    .file-row:hover { background: var(--blue-soft); }
+    button.file-row { width: 100%; color: var(--ink); background: transparent; border: 0; text-align: left; cursor: pointer; }
+    .file-main { display: flex; align-items: center; gap: 12px; min-width: 0; }
+    .file-icon { width: 35px; height: 35px; display: grid; place-items: center; flex: 0 0 35px; border-radius: 9px; background: var(--blue-soft); }
+    .file-name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-weight: 650; }
+    .file-type, .file-size { color: var(--muted); font-size: .8rem; text-align: right; }
+    .empty { padding: 70px 20px; text-align: center; color: var(--muted); }
+    .loading { padding: 35px 20px; color: var(--muted); text-align: center; }
+
+    .about { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 30px; margin-top: 70px; padding: 30px; border-radius: 16px; color: #fff; background: linear-gradient(135deg, #0b1739, #123a61); }
+    .about h2 { margin: 0 0 8px; }
+    .about p { max-width: 720px; margin: 0; color: #c7d5ef; }
+    .profile-chip { padding: 12px 16px; border: 1px solid rgba(255,255,255,.17); border-radius: 12px; background: rgba(255,255,255,.08); white-space: nowrap; }
+    .profile-chip span { display: block; color: #9ec4ff; font-size: .75rem; }
+
+    .lab-status { margin-bottom: 64px; scroll-margin-top: 90px; }
+    .table-scroll { overflow-x: auto; margin: 20px 0 26px; border: 1px solid var(--line); border-radius: 12px; }
+    .lab-table { width: 100%; border-collapse: collapse; background: var(--surface); text-align: left; }
+    .lab-table caption { padding: 12px 16px; color: var(--muted); text-align: left; }
+    .lab-table th, .lab-table td { padding: 12px 16px; border-top: 1px solid var(--line); }
+    .lab-table thead { background: var(--blue-soft); }
+    .lab-table a, .review-list a { color: var(--blue); text-underline-offset: 3px; }
+    .review-list { padding-left: 22px; }
+    .review-list li { margin-bottom: 10px; }
+    .review-note { color: var(--muted); }
+    footer { padding: 26px 0 35px; color: var(--muted); text-align: center; font-size: .85rem; }
+
+    @media (max-width: 820px) {
+      .nav-links a:not(.github-link) { display: none; }
+      .hero { padding-top: 62px; }
+      .hero-grid { grid-template-columns: 1fr; gap: 34px; }
+      .repo-card { max-width: 560px; }
+      .stats { grid-template-columns: repeat(2, 1fr); }
+      .stat:nth-child(2) { border-right: 0; }
+      .stat:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+      .course-grid { grid-template-columns: 1fr; }
+      .about { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 570px) {
+      .container { width: min(100% - 24px, 1120px); }
+      .hero h1 { font-size: 2.5rem; }
+      .stats { margin-top: -22px; }
+      .stat { padding: 17px; }
+      .explorer-bar { align-items: stretch; flex-direction: column; }
+      .search { width: 100%; }
+      .file-row { grid-template-columns: minmax(0, 1fr) 74px; padding-inline: 14px; }
+      .file-size { display: none; }
+      .section-head { align-items: start; flex-direction: column; }
+    }
   </style>
 </head>
 <body>
-  <h1>Backend Development</h1>
-  <p>Saksham Katiyar · SAP ID: 590015169</p>
-  <p>Coursework for Backend Development: laboratory experiments, Unit 1 theory tasks, and assignments.</p>
-  <ul>
-    <li><a href="https://github.com/saksham001k/Backend-Development-/tree/main/LAB">Lab work</a></li>
-    <li><a href="https://github.com/saksham001k/Backend-Development-/tree/main/Theory">Theory</a></li>
-    <li><a href="https://github.com/saksham001k/Backend-Development-/tree/main/Assignment">Assignments</a></li>
-    <li><a href="https://github.com/saksham001k/Backend-Development-">Full repository and README</a></li>
-  </ul>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#top" aria-label="Saksham's Backend Development home">
+        <span class="brand-mark">SK</span>
+        <span>Saksham.dev</span>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#coursework">Coursework</a>
+        <a href="#assignments">Assignments</a>
+        <a href="#repository">Repository</a>
+        <a href="#about">About</a>
+        <a class="github-link" href="https://github.com/saksham001k/Backend-Development-" target="_blank" rel="noreferrer">GitHub ↗</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Switch colour theme" title="Switch theme">☾</button>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" id="top">
+    <div class="container hero-grid">
+      <div>
+        <p class="eyebrow">Backend Development • CSFS3008P</p>
+        <h1>Backend development, <span>built one task at a time.</span></h1>
+        <p class="hero-copy">My UPES coursework in one place: Unit 1 theory, lab experiments, exam apps, and assignments. Open each project and see the source on GitHub.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#repository">Browse coursework ↓</a>
+          <a class="btn btn-secondary" href="https://github.com/saksham001k/Backend-Development-" target="_blank" rel="noreferrer">Open repository ↗</a>
+        </div>
+      </div>
+      <aside class="repo-card" aria-label="Repository information">
+        <div class="repo-top">
+          <span class="repo-name">Backend-Development-</span>
+          <span class="live-badge"><span class="live-dot"></span> Public repository</span>
+        </div>
+        <ul class="code-lines">
+          <li><strong>owner</strong>  saksham001k</li>
+          <li><strong>branch</strong> main</li>
+          <li><strong>course</strong> Backend Development</li>
+          <li><strong>stack</strong>  Node · Express · FastAPI</li>
+          <li><strong>status</strong> Unit 1 · assignments · lab work</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <div class="container stats" aria-label="Coursework summary">
+    <div class="stat"><strong>6</strong><span>Theory tasks</span></div>
+    <div class="stat"><strong>11</strong><span>Labs and exam submissions</span></div>
+    <div class="stat"><strong>2</strong><span>Assignments</span></div>
+    <div class="stat"><strong>main</strong><span>Published branch</span></div>
+  </div>
+
+  <main>
+    <div class="container">
+      <section id="coursework">
+        <div class="section-head">
+          <div>
+            <h2>Coursework overview</h2>
+            <p>Organised the same way as my GitHub repository.</p>
+          </div>
+          <a class="text-link" href="https://github.com/saksham001k/Backend-Development-/blob/main/README.md" target="_blank" rel="noreferrer">Read full README ↗</a>
+        </div>
+        <div class="course-grid">
+          <article class="course-card" style="--accent:#2563eb;--progress:100%">
+            <div class="course-icon">◫</div>
+            <h3>Theory — Unit 1</h3>
+            <p>Node.js, HTTP, REST APIs, FastAPI, state management, browser storage and server-side rendering.</p>
+            <div class="progress-label"><span>6 tasks uploaded</span><strong>Unit 1</strong></div>
+            <div class="progress"><span></span></div>
+          </article>
+          <article class="course-card" style="--accent:#06b6d4;--icon-bg:#e6faff">
+            <div class="course-icon">⌘</div>
+            <h3>Laboratory</h3>
+            <p>Git, HTML5, CSS, responsive design, JavaScript arrays and objects, Node.js, Express, sessions, cookies, MongoDB and Mongoose.</p>
+            <div class="progress-label"><span>9 labs + 2 exams uploaded</span><strong>JavaScript</strong></div>
+            <a class="text-link" href="#lab-status">View lab checklist ↓</a>
+          </article>
+          <article class="course-card" style="--accent:#16a34a;--icon-bg:#eaf8ee;--progress:100%">
+            <div class="course-icon">✓</div>
+            <h3>Practice applications</h3>
+            <p>Two simple browser applications: a Notes App and a To-Do List using JavaScript and localStorage.</p>
+            <div class="progress-label"><span>2 applications completed</span><strong>100%</strong></div>
+            <div class="progress"><span></span></div>
+          </article>
+        </div>
+      </section>
+
+
+      <section id="assignments" class="lab-status" aria-labelledby="assignments-heading">
+        <div class="section-head">
+          <div>
+            <h2 id="assignments-heading">Assignments</h2>
+            <p>Source and write-up in the coursework repository.</p>
+          </div>
+        </div>
+        <p><strong>Assignment 1 — Notes App:</strong> Add, view and delete notes in the browser with JavaScript and localStorage. <a class="text-link" href="https://github.com/saksham001k/Backend-Development-/tree/main/Assignment/Assignment1" target="_blank" rel="noreferrer">Open files ↗</a></p>
+        <p><strong>Assignment 2 — PostgreSQL JSONB:</strong> Product examples, JSONB operators, indexing and equivalent MongoDB queries. Local EXPLAIN ANALYZE timings are still to be recorded. <a class="text-link" href="https://github.com/saksham001k/Backend-Development-/blob/main/Assignment/Assignment2.md" target="_blank" rel="noreferrer">Read assignment ↗</a></p>
+      </section>
+
+      <section id="lab-status" class="lab-status" aria-labelledby="lab-heading">
+        <div class="section-head">
+          <div>
+            <h2 id="lab-heading">Lab work and viva checklist</h2>
+            <p>Experiments and exam applications uploaded to GitHub.</p>
+          </div>
+        </div>
+        <p>Experiment 5 now includes the JavaScript demonstrations and library PBL. Exam01 and Exam01B are also available below. Exam01 was tested locally with Atlas; the review checks and screenshot use isolated sample data as documented in its README.</p>
+        <div class="table-scroll" tabindex="0" role="region" aria-label="Uploaded laboratory experiments">
+          <table class="lab-table">
+            <caption>Nine lab experiments and two exam applications</caption>
+            <thead><tr><th scope="col">Experiment</th><th scope="col">Topic</th><th scope="col">Files</th><th scope="col">Report</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Exam01B</th><td>Eisenhower Todo · Express, EJS and MongoDB</td><td><a href="https://github.com/saksham001k/Backend-Development-/tree/main/LAB/Exam01B" target="_blank" rel="noreferrer">Source ↗</a></td><td><a href="https://github.com/saksham001k/Backend-Development-/blob/main/LAB/Exam01B/README.md" target="_blank" rel="noreferrer">README.md ↗</a></td></tr>
+              <tr><th scope="row">Exam01</th><td>My Notes · Express, EJS and MongoDB</td><td><a href="https://github.com/saksham001k/Backend-Development-/tree/main/LAB/Exam01" target="_blank" rel="noreferrer">Source ↗</a></td><td><a href="https://github.com/saksham001k/Backend-Development-/blob/main/LAB/Exam01/README.md" target="_blank" rel="noreferrer">README ↗</a></td></tr>
+              <tr><th scope="row">Exp0</th><td>Git basics</td><td><a href="https://github.com/saksham001k/Backend-Development-/tree/main/LAB/Exp0" target="_blank" rel="noreferrer">Source ↗</a></td><td><a href="https://github.com/saksham001k/Backend-Development-/blob/main/LAB/Exp0/Report.md" target="_blank" rel="noreferrer">Report.md ↗</a></td></tr>
+              <tr><th scope="row">Exp1</th><td>HTML5 elements</td><td><a href="https://github.com/saksham001k/Backend-Development-/tree/main/LAB/Exp1" target="_blank" rel="noreferrer">Source ↗</a></td><td><a href="https://github.com/saksham001k/Backend-Development-/blob/main/LAB/Exp1/Report.md" target="_blank" rel="noreferrer">Report.md ↗</a></td></tr>
+              <tr><th scope="row">Exp2</th><td>CSS and layout</td><td><a href="https://github.com/saksham001k/Backend-Development-/tree/main/LAB/Exp2" target="_blank" rel="noreferrer">Source ↗</a></td><td><a href="https://github.com/saksham001k/Backend-Development-/blob/main/LAB/Exp2/Report.md" target="_blank" rel="noreferrer">Report.md ↗</a></td></tr>
+              <tr><th scope="row">Exp3</th><td>Responsive HTML and CSS</td><td><a href="https://github.com/saksham001k/Backend-Development-/tree/main/LAB/Exp3" target="_blank" rel="noreferrer">Source ↗</a></td><td><a href="https://github.com/saksham001k/Backend-Development-/blob/main/LAB/Exp3/Report.md" target="_blank" rel="noreferrer">Report.md ↗</a></td></tr>
+              <tr><th scope="row">Exp4</th><td>Bootstrap and Tailwind</td><td><a href="https://github.com/saksham001k/Backend-Development-/tree/main/LAB/Exp4" target="_blank" rel="noreferrer">Source ↗</a></td><td><a href="https://github.com/saksham001k/Backend-Development-/blob/main/LAB/Exp4/Report.md" target="_blank" rel="noreferrer">Report.md ↗</a></td></tr>
+              <tr><th scope="row">Exp5</th><td>JavaScript arrays, objects, functions and library PBL</td><td><a href="https://github.com/saksham001k/Backend-Development-/tree/main/LAB/Exp5" target="_blank" rel="noreferrer">Source ↗</a></td><td><a href="https://github.com/saksham001k/Backend-Development-/blob/main/LAB/Exp5/Report.md" target="_blank" rel="noreferrer">Report.md ↗</a></td></tr>
+              <tr><th scope="row">Exp12A</th><td>Node, Express and EJS</td><td><a href="https://github.com/saksham001k/Backend-Development-/tree/main/LAB/Exp12" target="_blank" rel="noreferrer">Source ↗</a></td><td><a href="https://github.com/saksham001k/Backend-Development-/blob/main/LAB/Exp12/Report.md" target="_blank" rel="noreferrer">Report.md ↗</a></td></tr>
+              <tr><th scope="row">Exp12B</th><td>Sessions and cookies</td><td><a href="https://github.com/saksham001k/Backend-Development-/tree/main/LAB/Exp12B" target="_blank" rel="noreferrer">Source ↗</a></td><td><a href="https://github.com/saksham001k/Backend-Development-/blob/main/LAB/Exp12B/README.md" target="_blank" rel="noreferrer">README.md ↗</a></td></tr>
+              <tr><th scope="row">Exp13A</th><td>MongoDB and Mongoose</td><td><a href="https://github.com/saksham001k/Backend-Development-/tree/main/LAB/Exp13A" target="_blank" rel="noreferrer">Source ↗</a></td><td><a href="https://github.com/saksham001k/Backend-Development-/blob/main/LAB/Exp13A/Report.md" target="_blank" rel="noreferrer">Report.md ↗</a></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <h3>Experiment 5 — JavaScript</h3>
+        <p>Arrays, objects, greeting functions, string methods and add/read/update operations. The library activity adds book objects and finds them by title. All three scripts were run successfully with Node.js.</p>
+        <p><a class="text-link" href="https://github.com/saksham001k/Backend-Development-/blob/main/LAB/Exp5/README.md">Run Experiment 5 ↗</a> · <a class="text-link" href="https://github.com/saksham001k/Backend-Development-/blob/main/LAB/Exp5/Report.md">Read report ↗</a></p>
+        <h3>Exam01B — Eisenhower Todo</h3>
+        <p>Task creation, four urgency/importance groups and deletion using Express, EJS and MongoDB. Route checks passed with an isolated collection double; local database verification and the submission screenshot remain pending.</p>
+        <h3>Exam01 My Notes</h3>
+        <p>Add, display and delete notes stored in MongoDB. EJS renders the pages, title and content are validated on the server, and CSS provides the optional interface enhancement.</p>
+        <ul class="review-list">
+          <li><strong>Required features:</strong> all four note fields, empty state, add form, validation, database insertion, redirect and deletion by ObjectId are implemented.</li>
+          <li><strong>Submission:</strong> source, templates, CSS, run instructions and an application screenshot are included.</li>
+          <li><strong>Viva topics:</strong> Express routes, form parsing, EJS, MongoClient, find/toArray, insertOne, deleteOne, ObjectId, status codes and persistence.</li>
+          <li><strong>Scope:</strong> PostgreSQL, login and a separate REST API are not required for Exam01. CSS is the selected optional enhancement.</li>
+        </ul>
+        <p><a class="text-link" href="https://github.com/saksham001k/Backend-Development-/blob/main/LAB/Exam01/README.md">Run instructions ↗</a> · <a class="text-link" href="https://github.com/saksham001k/Backend-Development-/blob/main/LAB/Exam01/screenshot.png">View screenshot ↗</a></p>
+        <p class="review-note">The Exam01 screenshot uses sample notes from an isolated test. Local Atlas connectivity and persistence were also confirmed during practice.</p>
+        <p class="review-note">GitHub Pages displays this coursework portal. Express, Python servers and database demos must run in a suitable local or hosted environment.</p>
+      </section>
+
+      <section id="repository">
+        <div class="section-head">
+          <div>
+            <h2>Repository browser</h2>
+            <p>Browse the real files directly from my Backend Development repository.</p>
+          </div>
+          <a class="text-link" href="https://github.com/saksham001k/Backend-Development-" target="_blank" rel="noreferrer">View on GitHub ↗</a>
+        </div>
+        <div class="explorer">
+          <div class="explorer-bar">
+            <div class="connection">
+              <span class="live-dot"></span>
+              <div><strong id="connectionTitle">Connected to GitHub</strong><small>saksham001k / Backend-Development- / main</small></div>
+            </div>
+            <input class="search" id="fileSearch" type="search" placeholder="Search this folder…" aria-label="Search current repository folder">
+          </div>
+          <div class="breadcrumbs" id="breadcrumbs" aria-label="Repository breadcrumb"></div>
+          <div class="file-list" id="fileList" aria-live="polite"><div class="loading">Loading repository files…</div></div>
+        </div>
+      </section>
+
+      <section class="about" id="about">
+        <div>
+          <h2>About this workspace</h2>
+          <p>I am Saksham Katiyar, a B.Tech Computer Science Engineering student at UPES. This site keeps my Backend Development learning easy to navigate and connects directly to the source work maintained on GitHub.</p>
+        </div>
+        <div class="profile-chip"><span>STUDENT ID</span>590015169</div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">Built and maintained by Saksham Katiyar • Backend Development • 2026</div>
+  </footer>
+
+  <script>
+    const REPOSITORY = "saksham001k/Backend-Development-";
+    const BRANCH = "main";
+    const API_ROOT = `https://api.github.com/repos/${REPOSITORY}/contents`;
+    const fileList = document.getElementById("fileList");
+    const breadcrumbs = document.getElementById("breadcrumbs");
+    const fileSearch = document.getElementById("fileSearch");
+    const connectionTitle = document.getElementById("connectionTitle");
+    let currentPath = "";
+    let currentItems = [];
+
+    const fallbackItems = [
+      { name: "LAB", path: "LAB", type: "dir", size: 0 },
+      { name: "Theory", path: "Theory", type: "dir", size: 0 },
+      { name: "Assignment", path: "Assignment", type: "dir", size: 0 },
+      { name: "Todo", path: "Todo", type: "dir", size: 0 },
+      { name: "README.md", path: "README.md", type: "file", size: 2528, html_url: `https://github.com/${REPOSITORY}/blob/${BRANCH}/README.md` }
+    ];
+
+    function formatSize(bytes) {
+      if (!bytes) return "—";
+      if (bytes < 1024) return `${bytes} B`;
+      return `${(bytes / 1024).toFixed(1)} KB`;
+    }
+
+    function getType(item) {
+      if (item.type === "dir") return "Folder";
+      const extension = item.name.includes(".") ? item.name.split(".").pop().toUpperCase() : "File";
+      return extension;
+    }
+
+    function repoUrl(path) {
+      return `https://github.com/${REPOSITORY}/blob/${BRANCH}/${path.split("/").map(encodeURIComponent).join("/")}`;
+    }
+
+    function makeRow(item) {
+      const row = document.createElement(item.type === "dir" ? "button" : "a");
+      row.className = "file-row";
+      if (item.type === "dir") {
+        row.type = "button";
+        row.addEventListener("click", () => loadPath(item.path));
+      } else {
+        row.href = item.html_url || repoUrl(item.path);
+        row.target = "_blank";
+        row.rel = "noreferrer";
+      }
+
+      const main = document.createElement("span");
+      main.className = "file-main";
+      const icon = document.createElement("span");
+      icon.className = "file-icon";
+      icon.textContent = item.type === "dir" ? "📁" : "📄";
+      const name = document.createElement("span");
+      name.className = "file-name";
+      name.textContent = item.name;
+      main.append(icon, name);
+
+      const type = document.createElement("span");
+      type.className = "file-type";
+      type.textContent = getType(item);
+      const size = document.createElement("span");
+      size.className = "file-size";
+      size.textContent = item.type === "dir" ? "Open →" : formatSize(item.size);
+      row.append(main, type, size);
+      return row;
+    }
+
+    function renderItems(items) {
+      fileList.replaceChildren();
+      if (!items.length) {
+        const empty = document.createElement("div");
+        empty.className = "empty";
+        empty.textContent = "No matching files in this folder.";
+        fileList.append(empty);
+        return;
+      }
+      const ordered = [...items].sort((a, b) => {
+        if (a.type !== b.type) return a.type === "dir" ? -1 : 1;
+        return a.name.localeCompare(b.name, undefined, { numeric: true });
+      });
+      ordered.forEach(item => fileList.append(makeRow(item)));
+    }
+
+    function renderBreadcrumbs(path) {
+      breadcrumbs.replaceChildren();
+      const parts = path ? path.split("/") : [];
+      const rootButton = document.createElement("button");
+      rootButton.className = "crumb";
+      rootButton.textContent = "Backend-Development-";
+      rootButton.addEventListener("click", () => loadPath(""));
+      breadcrumbs.append(rootButton);
+
+      parts.forEach((part, index) => {
+        const separator = document.createElement("span");
+        separator.className = "crumb-sep";
+        separator.textContent = "/";
+        const button = document.createElement("button");
+        button.className = "crumb";
+        button.textContent = part;
+        button.addEventListener("click", () => loadPath(parts.slice(0, index + 1).join("/")));
+        breadcrumbs.append(separator, button);
+      });
+    }
+
+    async function loadPath(path = "") {
+      currentPath = path;
+      fileSearch.value = "";
+      renderBreadcrumbs(path);
+      fileList.innerHTML = '<div class="loading">Loading repository files…</div>';
+      try {
+        const encodedPath = path.split("/").filter(Boolean).map(encodeURIComponent).join("/");
+        const response = await fetch(`${API_ROOT}/${encodedPath}?ref=${BRANCH}`, { headers: { Accept: "application/vnd.github+json" } });
+        if (!response.ok) throw new Error(`GitHub returned ${response.status}`);
+        const data = await response.json();
+        currentItems = Array.isArray(data) ? data.filter(item => item.name !== ".gitignore") : [];
+        connectionTitle.textContent = "Live repository connection";
+        renderItems(currentItems);
+        history.replaceState(null, "", path ? `#path=${encodeURIComponent(path)}` : "#repository");
+      } catch (error) {
+        connectionTitle.textContent = "Repository preview";
+        currentItems = path ? [] : fallbackItems;
+        renderItems(currentItems);
+        if (path) {
+          fileList.innerHTML = '<div class="empty">This folder could not be loaded right now. Open it directly on GitHub using the repository link above.</div>';
+        }
+      }
+    }
+
+    fileSearch.addEventListener("input", event => {
+      const query = event.target.value.trim().toLowerCase();
+      renderItems(currentItems.filter(item => item.name.toLowerCase().includes(query)));
+    });
+
+    const themeToggle = document.getElementById("themeToggle");
+    const savedTheme = localStorage.getItem("backend-site-theme");
+    if (savedTheme === "dark") document.body.classList.add("dark");
+    themeToggle.textContent = document.body.classList.contains("dark") ? "☀" : "☾";
+    themeToggle.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+      const dark = document.body.classList.contains("dark");
+      themeToggle.textContent = dark ? "☀" : "☾";
+      localStorage.setItem("backend-site-theme", dark ? "dark" : "light");
+    });
+
+    const hashPath = location.hash.startsWith("#path=") ? decodeURIComponent(location.hash.slice(6)) : "";
+    loadPath(hashPath);
+  </script>
 </body>
 </html>
