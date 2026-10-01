@@ -44,7 +44,11 @@ Local practice confirmed MongoDB connectivity and persistence. The uploaded code
 
 | Lecture | Topic | Status |
 |---|---|---|
+| [Lecture 13](./Theory/Unit2/L13/README.md) | PostgreSQL and MongoDB student records | Scripts ready; local database run pending |
+| [Lecture 14A](./Theory/Unit2/L14A/README.md) | Library schema and order normalization | ✅ SQL checked locally |
+| [Lecture 14B](./Theory/Unit2/L14B/README.md) | 1NF through BCNF explanation | ✅ Completed |
 | [Lecture 15](./Theory/Unit2/L15/README.md) | Data modeling with SQLAlchemy and Mongoose | ✅ Exercise completed |
+| [Lecture 16](./Theory/Unit2/L16/README.md) | FastAPI and SQLAlchemy CRUD | ✅ Routes checked locally |
 
 ## Laboratory Experiments
 
@@ -98,7 +102,11 @@ Backend-Development-/
 │   ├── Exp12B/
 │   └── Exp13A/
 ├── Theory/
+│   ├── Unit2/L13/
+│   ├── Unit2/L14A/
+│   ├── Unit2/L14B/
 │   ├── Unit2/L15/
+│   ├── Unit2/L16/
 │   ├── Task1/
 │   ├── Task2/
 │   ├── Task3/
@@ -110,7 +118,7 @@ Backend-Development-/
 
 ## Progress
 
-The required laboratory work through Experiment 13A, all six Unit 1 theory tasks, the Lecture 15 exercise, and the two assignments are maintained in this repository. Assignment 2 includes commands for a local PostgreSQL and MongoDB run; its EXPLAIN ANALYZE timings are pending that run.
+The required laboratory work through Experiment 13A, all six Unit 1 theory tasks, Unit 2 Lectures 13 through 16, and the two assignments are maintained in this repository. Assignment 2 includes commands for a local PostgreSQL and MongoDB run; its EXPLAIN ANALYZE timings are pending that run.
 
 ## Work log
 
@@ -123,3 +131,5 @@ The required laboratory work through Experiment 13A, all six Unit 1 theory tasks
 - 1 October 2026: Moved the browser Notes App into Assignment 1, added Assignment 2 PostgreSQL JSONB and MongoDB work, and checked Unit 1 task reports and source files.
 
 - 1 October 2026: Completed Lecture 15 data modeling exercise with a conceptual E-Commerce model, SQLAlchemy Student Management CRUD, and Mongoose Blog schema validation.
+
+- 1 October 2026: Added Unit 2 Lecture 13 database scripts, Lecture 14 schema and normalization work, and Lecture 16 CRUD API. Checked SQL with SQLite and exercised the API locally. Live PostgreSQL/MongoDB runs remain local steps.
