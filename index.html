@@ -107,7 +107,23 @@
     .btn-primary { background: #fff; color: var(--navy); }
     .btn-secondary { border-color: rgba(255,255,255,.28); background: rgba(255,255,255,.08); color: #fff; }
 
-    .repo-card { padding: 22px; border: 1px solid rgba(255,255,255,.15); border-radius: 18px; background: rgba(5, 15, 38, .62); box-shadow: 0 25px 70px rgba(0,0,0,.28); backdrop-filter: blur(12px); }
+    .hero-scene { position: relative; min-height: 370px; display: grid; place-items: center; perspective: 950px; isolation: isolate; }
+    .scene-halo { position: absolute; width: 390px; height: 390px; border-radius: 50%; background: radial-gradient(circle, rgba(48,206,255,.32), rgba(51,91,255,.12) 48%, transparent 70%); filter: blur(18px); }
+    .scene-floor { position: absolute; bottom: -34px; width: 510px; height: 210px; border: 1px solid rgba(125,211,252,.2); border-radius: 50%; transform: rotateX(74deg); box-shadow: 0 0 0 38px rgba(45,164,236,.035), 0 0 0 76px rgba(45,164,236,.025), inset 0 0 70px rgba(13,148,210,.16); }
+    .scene-stack { position: relative; width: min(100%, 450px); transform-style: preserve-3d; transform: rotateX(var(--rx, 11deg)) rotateY(var(--ry, -13deg)); transition: transform .32s ease-out; animation: scene-enter .9s both; }
+    .scene-layer { position: absolute; inset: 4px; border-radius: 22px; pointer-events: none; }
+    .scene-layer-back { border: 1px solid rgba(103,232,249,.4); background: linear-gradient(135deg, rgba(18,99,174,.38), rgba(6,182,212,.11)); transform: translate3d(27px, -22px, -95px); box-shadow: 30px 40px 65px rgba(2,9,29,.3); }
+    .scene-layer-middle { border: 1px solid rgba(147,197,253,.36); background: linear-gradient(145deg, rgba(37,99,235,.26), rgba(6,182,212,.18)); transform: translate3d(13px, -11px, -48px); }
+    .repo-card { position: relative; padding: 22px; border: 1px solid rgba(161,218,255,.44); border-radius: 20px; background: linear-gradient(145deg, rgba(18,43,87,.95), rgba(5,17,43,.95)); box-shadow: 0 35px 75px rgba(0,0,0,.42), inset 0 1px 0 rgba(255,255,255,.2), 0 0 35px rgba(36,148,255,.1); backdrop-filter: blur(16px); transform: translateZ(36px); }
+    .terminal-bar { display:flex; align-items:center; gap:6px; margin: -2px 0 18px; }
+    .terminal-bar span { width:7px; height:7px; border-radius:50%; background:#fb7185; }
+    .terminal-bar span:nth-child(2) { background:#fbbf24; }
+    .terminal-bar span:nth-child(3) { background:#4ade80; }
+    .terminal-bar small { margin-left:auto; color:#8ea8d4; font: .69rem ui-monospace, SFMono-Regular, Menlo, monospace; }
+    .scene-tag { position:absolute; z-index:2; padding:9px 14px; border:1px solid rgba(153,235,255,.55); border-radius:12px; color:#d9faff; background:linear-gradient(135deg, rgba(30,91,150,.96), rgba(10,43,85,.96)); box-shadow:0 14px 27px rgba(1,11,35,.34), inset 0 1px 0 rgba(255,255,255,.2); font:.72rem ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing:.1em; white-space:nowrap; }
+    .scene-tag-top { top:-29px; right:-11px; transform:translateZ(100px); }
+    .scene-tag-bottom { bottom:-25px; left:-22px; transform:translateZ(105px); }
+    @keyframes scene-enter { from { opacity:0; transform:translateY(26px) rotateX(15deg) rotateY(-19deg); } to { opacity:1; transform:rotateX(var(--rx, 11deg)) rotateY(var(--ry, -13deg)); } }
     .repo-top { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-bottom: 16px; border-bottom: 1px solid rgba(255,255,255,.12); }
     .repo-name { font-weight: 750; }
     .live-badge { display: inline-flex; align-items: center; gap: 7px; color: #bbf7d0; font-size: .78rem; }
@@ -128,7 +144,8 @@
     .text-link { color: var(--blue); font-weight: 700; text-decoration: none; white-space: nowrap; }
 
     .course-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-bottom: 72px; }
-    .course-card { position: relative; overflow: hidden; min-height: 225px; padding: 24px; background: var(--surface); border: 1px solid var(--line); border-radius: 15px; box-shadow: 0 10px 28px rgba(15,32,68,.05); }
+    .course-card { position: relative; overflow: hidden; min-height: 225px; padding: 24px; background: var(--surface); border: 1px solid var(--line); border-radius: 15px; box-shadow: 0 10px 28px rgba(15,32,68,.05); transition: transform .25s ease, box-shadow .25s ease; }
+    .course-card:hover { transform: translateY(-7px); box-shadow: 0 22px 40px rgba(15,32,68,.14); }
     .course-card::before { content: ""; position: absolute; inset: 0 auto 0 0; width: 4px; background: var(--accent, var(--blue)); }
     .course-icon { width: 42px; height: 42px; display: grid; place-items: center; margin-bottom: 18px; border-radius: 12px; background: var(--icon-bg, var(--blue-soft)); font-size: 1.2rem; }
     .course-card h3 { margin: 0 0 8px; font-size: 1.08rem; }
@@ -181,7 +198,8 @@
       .nav-links a:not(.github-link) { display: none; }
       .hero { padding-top: 62px; }
       .hero-grid { grid-template-columns: 1fr; gap: 34px; }
-      .repo-card { max-width: 560px; }
+      .hero-scene { min-height: 380px; width: min(100%, 560px); margin: 0 auto; }
+      .scene-stack { width: min(88%, 450px); }
       .stats { grid-template-columns: repeat(2, 1fr); }
       .stat:nth-child(2) { border-right: 0; }
       .stat:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
@@ -191,6 +209,15 @@
     @media (max-width: 570px) {
       .container { width: min(100% - 24px, 1120px); }
       .hero h1 { font-size: 2.5rem; }
+      .hero-scene { min-height: 300px; }
+      .scene-stack { width: 90%; }
+      .repo-card { padding: 16px; }
+      .repo-top { flex-wrap: wrap; }
+      .code-lines { font-size: .7rem; }
+      .scene-tag { padding: 6px 8px; font-size: .6rem; }
+      .scene-tag-top { right: -5px; top: -20px; }
+      .scene-tag-bottom { left: -7px; bottom: -19px; }
+      .scene-floor { width: 320px; }
       .stats { margin-top: -22px; }
       .stat { padding: 17px; }
       .explorer-bar { align-items: stretch; flex-direction: column; }
@@ -199,14 +226,18 @@
       .file-size { display: none; }
       .section-head { align-items: start; flex-direction: column; }
     }
+    @media (prefers-reduced-motion: reduce) {
+      .scene-stack { animation: none; transition: none; }
+      .course-card, .btn { transition: none; }
+    }
   </style>
 </head>
 <body>
   <header class="site-header">
     <div class="container nav-wrap">
-      <a class="brand" href="#top" aria-label="Saksham's Backend Development home">
+      <a class="brand" href="#top" aria-label="Saksham Katiyar’s Backend Development home">
         <span class="brand-mark">SK</span>
-        <span>Saksham.dev</span>
+        <span>Saksham Katiyar</span>
       </a>
       <nav class="nav-links" aria-label="Main navigation">
         <a href="#coursework">Coursework</a>
@@ -230,19 +261,30 @@
           <a class="btn btn-secondary" href="https://github.com/saksham001k/Backend-Development-" target="_blank" rel="noreferrer">Open repository ↗</a>
         </div>
       </div>
-      <aside class="repo-card" aria-label="Repository information">
-        <div class="repo-top">
-          <span class="repo-name">Backend-Development-</span>
-          <span class="live-badge"><span class="live-dot"></span> Public repository</span>
+      <div class="hero-scene" id="heroScene">
+        <div class="scene-halo" aria-hidden="true"></div>
+        <div class="scene-floor" aria-hidden="true"></div>
+        <div class="scene-stack">
+          <div class="scene-layer scene-layer-back" aria-hidden="true"></div>
+          <div class="scene-layer scene-layer-middle" aria-hidden="true"></div>
+          <aside class="repo-card" aria-label="Repository information">
+            <div class="terminal-bar" aria-hidden="true"><span></span><span></span><span></span><small>coursework / main</small></div>
+            <div class="repo-top">
+              <span class="repo-name">Backend-Development-</span>
+              <span class="live-badge"><span class="live-dot"></span> Public repository</span>
+            </div>
+            <ul class="code-lines">
+              <li><strong>owner</strong>  saksham001k</li>
+              <li><strong>branch</strong> main</li>
+              <li><strong>course</strong> Backend Development</li>
+              <li><strong>stack</strong>  Node · Express · FastAPI</li>
+              <li><strong>status</strong> Unit 1 + Unit 2 · assignments · lab</li>
+            </ul>
+          </aside>
+          <span class="scene-tag scene-tag-top" aria-hidden="true">✦ THEORY</span>
+          <span class="scene-tag scene-tag-bottom" aria-hidden="true">◈ LAB + PROJECTS</span>
         </div>
-        <ul class="code-lines">
-          <li><strong>owner</strong>  saksham001k</li>
-          <li><strong>branch</strong> main</li>
-          <li><strong>course</strong> Backend Development</li>
-          <li><strong>stack</strong>  Node · Express · FastAPI</li>
-          <li><strong>status</strong> Unit 1 + Unit 2 · assignments · lab</li>
-        </ul>
-      </aside>
+      </div>
     </div>
   </section>
 
@@ -526,6 +568,21 @@
       const query = event.target.value.trim().toLowerCase();
       renderItems(currentItems.filter(item => item.name.toLowerCase().includes(query)));
     });
+
+    const heroScene = document.getElementById("heroScene");
+    if (heroScene && matchMedia("(hover: hover) and (pointer: fine)").matches && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      heroScene.addEventListener("pointermove", event => {
+        const bounds = heroScene.getBoundingClientRect();
+        const x = (event.clientX - bounds.left) / bounds.width - .5;
+        const y = (event.clientY - bounds.top) / bounds.height - .5;
+        heroScene.style.setProperty("--rx", `${11 - y * 12}deg`);
+        heroScene.style.setProperty("--ry", `${-13 + x * 18}deg`);
+      });
+      heroScene.addEventListener("pointerleave", () => {
+        heroScene.style.removeProperty("--rx");
+        heroScene.style.removeProperty("--ry");
+      });
+    }
 
     const themeToggle = document.getElementById("themeToggle");
     const savedTheme = localStorage.getItem("backend-site-theme");
