@@ -40,6 +40,12 @@ Local practice confirmed MongoDB connectivity and persistence. The uploaded code
 | [Task 5](./Theory/Task5/) | LocalStorage, SessionStorage and JSON | ✅ Completed |
 | [Task 6](./Theory/Task6/) | Server-Side Rendering with EJS and Jinja2 | ✅ Completed |
 
+## Theory — Unit 2
+
+| Lecture | Topic | Status |
+|---|---|---|
+| [Lecture 15](./Theory/Unit2/L15/README.md) | Data modeling with SQLAlchemy and Mongoose | ✅ Exercise completed |
+
 ## Laboratory Experiments
 
 | Experiment | Title | Status |
@@ -92,6 +98,7 @@ Backend-Development-/
 │   ├── Exp12B/
 │   └── Exp13A/
 ├── Theory/
+│   ├── Unit2/L15/
 │   ├── Task1/
 │   ├── Task2/
 │   ├── Task3/
@@ -103,7 +110,7 @@ Backend-Development-/
 
 ## Progress
 
-The required laboratory work through Experiment 13A, all six Unit 1 theory tasks, and the two assignments are maintained in this repository. Assignment 2 includes commands for a local PostgreSQL and MongoDB run; its EXPLAIN ANALYZE timings are pending that run.
+The required laboratory work through Experiment 13A, all six Unit 1 theory tasks, the Lecture 15 exercise, and the two assignments are maintained in this repository. Assignment 2 includes commands for a local PostgreSQL and MongoDB run; its EXPLAIN ANALYZE timings are pending that run.
 
 ## Work log
 
@@ -114,3 +121,5 @@ The required laboratory work through Experiment 13A, all six Unit 1 theory tasks
 - 29 September 2026: Completed Experiment 5 JavaScript demonstrations and library PBL, verified Node.js output, and updated the coursework portal.
 
 - 1 October 2026: Moved the browser Notes App into Assignment 1, added Assignment 2 PostgreSQL JSONB and MongoDB work, and checked Unit 1 task reports and source files.
+
+- 1 October 2026: Completed Lecture 15 data modeling exercise with a conceptual E-Commerce model, SQLAlchemy Student Management CRUD, and Mongoose Blog schema validation.

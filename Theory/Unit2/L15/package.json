@@ -1,0 +1,11 @@
+{
+  "name": "lecture15-blog-models",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node blog_models.js"
+  },
+  "dependencies": {
+    "mongoose": "^8.0.0"
+  }
+}
