@@ -1,0 +1,30 @@
+{% extends 'todo/base.html' %}
+{% block title %}My Tasks | TODO APP{% endblock %}
+{% block content %}
+<section class="panel">
+  <h1>My To-Do List</h1>
+  <p>My tasks stored in SQLite.</p>
+  <p><a class="button" href="{% url 'add_task' %}">Add a task</a></p>
+  <ul class="task-list">
+    {% for task in tasks %}
+    <li class="task-item">
+      <span class="task-title{% if task.completed %} completed{% endif %}">
+        {{ task.title }}{% if task.completed %} <small>(completed)</small>{% endif %}
+      </span>
+      <div class="task-actions">
+        <form method="post" action="{% url 'toggle_task' task.id %}">
+          {% csrf_token %}
+          <button type="submit">{% if task.completed %}Mark incomplete{% else %}Mark complete{% endif %}</button>
+        </form>
+        <form method="post" action="{% url 'delete_task' task.id %}">
+          {% csrf_token %}
+          <button class="danger" type="submit">Delete</button>
+        </form>
+      </div>
+    </li>
+    {% empty %}
+    <li class="empty">No tasks yet. Add your first task.</li>
+    {% endfor %}
+  </ul>
+</section>
+{% endblock %}

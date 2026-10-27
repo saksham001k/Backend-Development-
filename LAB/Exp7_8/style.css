@@ -1,0 +1,13 @@
+* { box-sizing: border-box; }
+body { font-family: Arial, sans-serif; background: #f4f6f8; color: #1f2937; margin: 0; }
+main { max-width: 650px; margin: 40px auto; padding: 24px; background: white; border: 1px solid #ddd; border-radius: 8px; }
+.input-row { display: flex; gap: 10px; margin-top: 8px; }
+input { flex: 1; min-width: 0; padding: 10px; font: inherit; }
+button { padding: 10px 14px; border: 0; border-radius: 4px; background: #2457c5; color: white; cursor: pointer; font: inherit; }
+ul { list-style: none; padding: 0; }
+li { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 0; border-bottom: 1px solid #ddd; }
+.task-title { padding-left: 0; background: transparent; color: #1f2937; text-align: left; overflow-wrap: anywhere; min-width: 0; }
+.done { text-decoration: line-through; color: #687386; }
+.delete-btn { background: #a62b37; flex-shrink: 0; }
+footer { padding: 20px; text-align: center; }
+@media (max-width: 680px) { main { margin: 20px 12px; } }

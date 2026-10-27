@@ -52,6 +52,8 @@ Local practice confirmed MongoDB connectivity and persistence. The uploaded code
 
 ## Laboratory Experiments
 
+[Open lab index](./LAB/README.md) · [Experiment 15 report](./LAB/Exp15/Report.md)
+
 | Experiment | Title | Status |
 |---|---|---|
 | [Exam01B](./LAB/Exam01B/README.md) | Eisenhower Todo with Express, EJS and MongoDB | ✅ Implemented and documented |
@@ -62,15 +64,18 @@ Local practice confirmed MongoDB connectivity and persistence. The uploaded code
 | [Experiment 3](./LAB/Exp3/Report.md) | Responsive Web Page with HTML and CSS | ✅ Completed |
 | [Experiment 4](./LAB/Exp4/Report.md) | Responsive Pages with Bootstrap and Tailwind | ✅ Completed |
 | [Experiment 5](./LAB/Exp5/Report.md) | JavaScript Arrays, Objects and Functions | ✅ Completed |
+| [Experiment 7 & 8](./LAB/Exp7_8/README.md) | ES6, DOM Manipulation and Event Handling | ✅ Completed |
 | [Experiment 12A](./LAB/Exp12/Report.md) | Node.js, Express.js, EJS and Nodemon | ✅ Completed |
 | [Experiment 12B](./LAB/Exp12B/README.md) | Sessions and Cookies | ✅ Completed |
 | [Experiment 13A](./LAB/Exp13A/Report.md) | Express and Mongoose User Management | ✅ Completed |
+| [Experiment 15](./LAB/Exp15/README.md) | Django To-Do: CRUD, Admin, reusable templates and static files (v1 + v2 together) | ✅ Implemented and checked |
 
 ## Main Technologies Used
 
 - HTML5, CSS3, Bootstrap and Tailwind CSS
 - JavaScript, Node.js, Express.js and EJS
-- Python, Flask, FastAPI and Jinja2
+- Python, Flask, FastAPI, Jinja2 and Django
+- SQLite and Django ORM
 - Git and GitHub
 - REST APIs, sessions, cookies and browser storage
 - MongoDB with the native Node.js driver and Mongoose
@@ -98,9 +103,11 @@ Backend-Development-/
 │   ├── Exp3/
 │   ├── Exp4/
 │   ├── Exp5/
+│   ├── Exp7_8/
 │   ├── Exp12/
 │   ├── Exp12B/
-│   └── Exp13A/
+│   ├── Exp13A/
+│   └── Exp15/  (one app for both lab manuals)
 ├── Theory/
 │   ├── Unit2/L13/
 │   ├── Unit2/L14A/
@@ -118,7 +125,7 @@ Backend-Development-/
 
 ## Progress
 
-The required laboratory work through Experiment 13A, all six Unit 1 theory tasks, Unit 2 Lectures 13 through 16, and the two assignments are maintained in this repository. Assignment 2 includes commands for a local PostgreSQL and MongoDB run; its EXPLAIN ANALYZE timings are pending that run.
+Laboratory submissions through Experiment 13A and the combined Experiment 15, all six Unit 1 theory tasks, Unit 2 Lectures 13 through 16, and the two assignments are maintained in this repository. Assignment 2 includes commands for a local PostgreSQL and MongoDB run; its EXPLAIN ANALYZE timings are pending that run.
 
 ## Work log
 
@@ -133,3 +140,6 @@ The required laboratory work through Experiment 13A, all six Unit 1 theory tasks
 - 1 October 2026: Completed Lecture 15 data modeling exercise with a conceptual E-Commerce model, SQLAlchemy Student Management CRUD, and Mongoose Blog schema validation.
 
 - 1 October 2026: Added Unit 2 Lecture 13 database scripts, Lecture 14 schema and normalization work, and Lecture 16 CRUD API. Checked SQL with SQLite and exercised the API locally. Live PostgreSQL/MongoDB runs remain local steps.
+
+
+- 27 October 2026: Added Experiment 15 as one Django/SQLite app covering v1 Basic and v2, with Admin, shared templates, static assets, tests and documentation. Updated the coursework and personal portals. Also completed the missing combined Experiment 7/8 ES6 and DOM exercise. The lab index lists optional labs separately.

@@ -1,0 +1,20 @@
+{% extends 'todo/base.html' %}
+{% block title %}Add Task | TODO APP{% endblock %}
+{% block content %}
+<section class="panel">
+  <h1>Add a task</h1>
+  {% if error %}<p role="alert">{{ error }}</p>{% endif %}
+  <form method="post" class="task-form">
+    {% csrf_token %}
+    <label for="title">Task title</label>
+    <input id="title" type="text" name="title" value="{{ title }}" maxlength="200" required>
+    <button type="submit">Save task</button>
+  </form>
+  <p><a href="{% url 'task_list' %}">Back to task list</a></p>
+</section>
+{% endblock %}
+{% block extra_js %}
+<script>
+  document.getElementById('title').focus();
+</script>
+{% endblock %}
