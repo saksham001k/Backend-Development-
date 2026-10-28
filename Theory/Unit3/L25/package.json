@@ -1,0 +1,12 @@
+{
+  "name": "lecture-25-express-api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Student Management API skeleton for Lecture 25",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}

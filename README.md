@@ -50,6 +50,19 @@ Local practice confirmed MongoDB connectivity and persistence. The uploaded code
 | [Lecture 15](./Theory/Unit2/L15/README.md) | Data modeling with SQLAlchemy and Mongoose | ✅ Exercise completed |
 | [Lecture 16](./Theory/Unit2/L16/README.md) | FastAPI and SQLAlchemy CRUD | ✅ Routes checked locally |
 
+## Theory — Unit 3
+
+[Open Unit 3](./Theory/Unit3/README.md) · [Theory index](./Theory/README.md)
+
+| Lecture | Topic | Status |
+|---|---|---|
+| [Lecture 25](./Theory/Unit3/L25/README.md) | Express setup and API skeleton | ✅ Root response checked |
+| [Lecture 26](./Theory/Unit3/L26/README.md) | Django setup and JSON response | ✅ Configuration and routes checked |
+| [Lecture 27](./Theory/Unit3/L27/README.md) | Django logging middleware and app routes | ✅ Logging, routing and error exercise checked |
+| [Lecture 28](./Theory/Unit3/L28/README.md) | Third-party API integration | ✅ Timeout/error handling and mocked tests passed |
+
+L26 contains the shared Django project extended by L27 and L28. Unit 3 is completed through L28 only. Unit 2 L17–L24 is still pending.
+
 ## Laboratory Experiments
 
 [Open lab index](./LAB/README.md) · [Experiment 15 report](./LAB/Exp15/Report.md)
@@ -114,6 +127,11 @@ Backend-Development-/
 │   ├── Unit2/L14B/
 │   ├── Unit2/L15/
 │   ├── Unit2/L16/
+│   ├── Unit3/
+│   │   ├── L25/
+│   │   ├── L26/  (shared Django project for L26–L28)
+│   │   ├── L27/
+│   │   └── L28/
 │   ├── Task1/
 │   ├── Task2/
 │   ├── Task3/
@@ -125,7 +143,9 @@ Backend-Development-/
 
 ## Progress
 
-Laboratory submissions through Experiment 13A and the combined Experiment 15, all six Unit 1 theory tasks, Unit 2 Lectures 13 through 16, and the two assignments are maintained in this repository. Assignment 2 includes commands for a local PostgreSQL and MongoDB run; its EXPLAIN ANALYZE timings are pending that run.
+Laboratory submissions through Experiment 13A and the combined Experiment 15, all six Unit 1 theory tasks, Unit 2 Lectures 13 through 16, Unit 3 Lectures 25 through 28, and the two assignments are maintained in this repository. Assignment 2 includes commands for a local PostgreSQL and MongoDB run; its EXPLAIN ANALYZE timings are pending that run.
+
+Unit 2 L17–L24 and Unit 3 L29 onward remain pending. There are 15 uploaded theory exercises; this is not continuous completion of every lecture through L28.
 
 ## Work log
 
@@ -143,3 +163,6 @@ Laboratory submissions through Experiment 13A and the combined Experiment 15, al
 
 
 - 27 October 2026: Added Experiment 15 as one Django/SQLite app covering v1 Basic and v2, with Admin, shared templates, static assets, tests and documentation. Updated the coursework and personal portals. Also completed the missing combined Experiment 7/8 ES6 and DOM exercise. The lab index lists optional labs separately.
+
+
+- 28 October 2026: Added Unit 3 L25–L28: Express API skeleton, Django project, request logging and student routes, and a third-party service utility with timeout handling and mocked tests. Express HTTP check and all 14 Django tests passed. Updated the theory index and both coursework portals.
