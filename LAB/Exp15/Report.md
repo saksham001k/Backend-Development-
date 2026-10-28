@@ -2,11 +2,12 @@
 
 **Name:** Saksham Katiyar  
 **SAP ID:** 590015169  
-**Date:** 27 October 2026
+**Date:** 27 October 2026  
+**L28 extension:** 28 October 2026
 
 ## Objective
 
-To build a Django To-Do app with SQLite and demonstrate CRUD, Django Admin, reusable templates and static assets. Both lab manuals are implemented in one project.
+To build a Django To-Do app with SQLite and demonstrate CRUD, Django Admin, reusable templates and static assets. Both lab manuals and the Theory L28 external API extension are implemented in one project.
 
 ## Tools Used
 
@@ -46,7 +47,22 @@ To build a Django To-Do app with SQLite and demonstrate CRUD, Django Admin, reus
 - Stopped and restarted the development server; the same sample tasks and completion state remained in SQLite.
 - Screenshots below use sample tasks and a temporary local review account. The database, sessions and account are not committed.
 
+## Theory L28 Extension — 28 October 2026
+
+1. Added `requests` and created `todo/utils.py` for the external HTTP call.
+2. Called JSONPlaceholder's post endpoint with `timeout=2` and `raise_for_status()`.
+3. Decoded and checked the JSON response, with safe messages for timeouts, network/HTTP failures and invalid data.
+4. Added the GET route `/api/external/<post_id>/` and a link in the shared header.
+5. Returned HTTP 200 for successful data and HTTP 503 when the external dependency fails.
+6. Added mocked tests for the utility and route. No live external request is made by the test suite.
+
+`python manage.py check` reports no issues; `makemigrations --check --dry-run` reports no changes. All 20 tests pass: 10 original To-Do tests and 10 API integration tests. No new database fields or migration are needed for this read-only integration.
+
+Example successful test response: `{"id":1,"title":"Example post"}` with HTTP 200. A simulated timeout returns `{"error":"External service timed out"}` with HTTP 503. These are mocked test outputs, not a claim about live third-party availability.
+
 ## Screenshots
+
+These screenshots were captured for the original Experiment 15 on 27 October. The L28 extension adds the External API header link and JSON endpoint; its verification is recorded above.
 
 | Page | Evidence |
 |---|---|
@@ -59,7 +75,7 @@ To build a Django To-Do app with SQLite and demonstrate CRUD, Django Admin, reus
 
 ## Result
 
-The basic CRUD application and the v2 extensions are implemented in the same `LAB/Exp15` folder. Tasks are stored through Django's ORM in SQLite. The shared footer shows Saksham Katiyar and SAP ID 590015169.
+The basic CRUD application, v2 extensions and L28 external API integration are implemented in the same `LAB/Exp15` folder. Tasks are stored through Django's ORM in SQLite. The shared footer shows Saksham Katiyar and SAP ID 590015169.
 
 ## Conclusion
 

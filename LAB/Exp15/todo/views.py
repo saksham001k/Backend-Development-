@@ -1,6 +1,8 @@
+from django.http import JsonResponse
 from django.shortcuts import get_object_or_404, redirect, render
-from django.views.decorators.http import require_POST, require_http_methods
+from django.views.decorators.http import require_GET, require_POST, require_http_methods
 from .models import Task
+from .utils import get_external_data
 
 
 def task_list(request):
@@ -38,3 +40,11 @@ def delete_task(request, task_id):
     task = get_object_or_404(Task, pk=task_id)
     task.delete()
     return redirect('task_list')
+
+
+@require_GET
+def external_data(request, post_id):
+    result = get_external_data(post_id)
+    if result['error']:
+        return JsonResponse({'error': result['error']}, status=503)
+    return JsonResponse(result['data'])

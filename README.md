@@ -81,7 +81,7 @@ L26 contains the shared Django project extended by L27 and L28. Unit 3 is comple
 | [Experiment 12A](./LAB/Exp12/Report.md) | Node.js, Express.js, EJS and Nodemon | ✅ Completed |
 | [Experiment 12B](./LAB/Exp12B/README.md) | Sessions and Cookies | ✅ Completed |
 | [Experiment 13A](./LAB/Exp13A/Report.md) | Express and Mongoose User Management | ✅ Completed |
-| [Experiment 15](./LAB/Exp15/README.md) | Django To-Do: CRUD, Admin, reusable templates and static files (v1 + v2 together) | ✅ Implemented and checked |
+| [Experiment 15](./LAB/Exp15/README.md) | Django To-Do: CRUD, Admin, templates, static files and L28 external API (one project) | ✅ Implemented and checked |
 
 ## Main Technologies Used
 
@@ -166,3 +166,6 @@ Unit 2 L17–L24 and Unit 3 L29 onward remain pending. There are 15 uploaded the
 
 
 - 28 October 2026: Added Unit 3 L25–L28: Express API skeleton, Django project, request logging and student routes, and a third-party service utility with timeout handling and mocked tests. Express HTTP check and all 14 Django tests passed. Updated the theory index and both coursework portals.
+
+
+- 28 October 2026: Extended the existing LAB/Exp15 app with Theory L28: requests utility, external-post JSON route, timeout/error handling, shared-header link and mocked tests. All 20 Exp15 tests passed. Updated the lab report, READMEs and both portals.

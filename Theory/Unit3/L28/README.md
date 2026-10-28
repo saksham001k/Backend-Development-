@@ -55,3 +55,8 @@ The tests patch `students.utils.requests.get`. They check the exact URL and time
 The external integration, controlled failure responses and mocked checks are implemented in the same Student Management project. External services can supply data and features while a service layer keeps their network behaviour separate from view logic.
 
 [Lecture source](https://upessocs.github.io/#d=/Lectures/Backend%20Development/Theory/Unit%203/&f=L28%20Integrating%20Third-Party%20APIs%20and%20Services.md)
+
+
+## Applied to Experiment 15
+
+The same activity is also implemented directly in the existing [LAB/Exp15](../../../LAB/Exp15/README.md) To-Do app. Its `todo/utils.py` calls the external service, and its `/api/external/1/` route is linked from the shared header. The lab report records 20 passing checks, including the new mocked integration tests.

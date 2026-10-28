@@ -14,13 +14,13 @@
 | [Exp12A](Exp12/Report.md) | Node.js, Express and EJS |
 | [Exp12B](Exp12B/README.md) | Sessions and cookies |
 | [Exp13A](Exp13A/Report.md) | Express and Mongoose |
-| [Exp15](Exp15/README.md) | Django To-Do: basic CRUD plus templates, static files and Admin |
+| [Exp15](Exp15/README.md) | Django To-Do: CRUD, templates, static files, Admin and L28 API integration |
 | [Exam01](Exam01/README.md) | Notes app with Express, EJS and MongoDB |
 | [Exam01B](Exam01B/README.md) | Eisenhower Todo with Express, EJS and MongoDB |
 
 ## Experiment 15
 
-Both v1 Basic and v2 are one application in `Exp15/`. [Report](Exp15/Report.md) · [Run instructions](Exp15/README.md).
+Both v1 Basic and v2 are one application in `Exp15/`, now extended with the Theory L28 external API utility and route. [Report](Exp15/Report.md) · [Run instructions](Exp15/README.md).
 
 ## Lab index check — 27 October 2026
 
