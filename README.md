@@ -63,6 +63,14 @@ Local practice confirmed MongoDB connectivity and persistence. The uploaded code
 
 L26 contains the shared Django project extended by L27 and L28. Unit 3 is completed through L28 only. Unit 2 L17–L24 is still pending.
 
+## Theory — Unit 4
+
+[Open Unit 4 reference](./Theory/Unit4/README.md) · [FastAPI Docker hands-on repository](https://github.com/saksham001k/fastapi-docker-handson) · [Successful workflow](https://github.com/saksham001k/fastapi-docker-handson/actions/runs/44060310292)
+
+The Student API, Dockerfile, two FastAPI instances, Nginx configuration and GitHub Actions workflow are maintained in the separate repository required by the tutorial. This course repository contains the reference only.
+
+Five API tests, Docker build, 20 load-balanced requests, multi-platform Docker Hub publishing, and pulling/running the published image passed in Actions. Local Docker Compose startup and API requests were also confirmed on my Mac. This is one Unit 4 hands-on task, not completion of the whole unit. The separate visible source-change demonstration remains to be recorded.
+
 ## Laboratory Experiments
 
 [Open lab index](./LAB/README.md) · [Experiment 15 report](./LAB/Exp15/Report.md)
@@ -89,7 +97,7 @@ L26 contains the shared Django project extended by L27 and L28. Unit 3 is comple
 - JavaScript, Node.js, Express.js and EJS
 - Python, Flask, FastAPI, Jinja2 and Django
 - SQLite and Django ORM
-- Git and GitHub
+- Git, GitHub Actions, Docker, Docker Hub and Nginx
 - REST APIs, sessions, cookies and browser storage
 - MongoDB with the native Node.js driver and Mongoose
 
@@ -127,6 +135,7 @@ Backend-Development-/
 │   ├── Unit2/L14B/
 │   ├── Unit2/L15/
 │   ├── Unit2/L16/
+│   ├── Unit4/README.md  (reference to separate FastAPI Docker repository)
 │   ├── Unit3/
 │   │   ├── L25/
 │   │   ├── L26/  (shared Django project for L26–L28)
@@ -145,7 +154,7 @@ Backend-Development-/
 
 Laboratory submissions through Experiment 13A and the combined Experiment 15, all six Unit 1 theory tasks, Unit 2 Lectures 13 through 16, Unit 3 Lectures 25 through 28, and the two assignments are maintained in this repository. Assignment 2 includes commands for a local PostgreSQL and MongoDB run; its EXPLAIN ANALYZE timings are pending that run.
 
-Unit 2 L17–L24 and Unit 3 L29 onward remain pending. There are 15 uploaded theory exercises; this is not continuous completion of every lecture through L28.
+Unit 2 L17–L24 and Unit 3 L29 onward remain pending. There are 15 theory exercises across Units 1–3 and one referenced Unit 4 Docker hands-on task. This is not continuous completion of every lecture or all of Unit 4.
 
 ## Work log
 
@@ -169,3 +178,5 @@ Unit 2 L17–L24 and Unit 3 L29 onward remain pending. There are 15 uploaded the
 
 
 - 28 October 2026: Extended the existing LAB/Exp15 app with Theory L28: requests utility, external-post JSON route, timeout/error handling, shared-header link and mocked tests. All 20 Exp15 tests passed. Updated the lab report, READMEs and both portals.
+
+- 17 November 2026: Linked the separate FastAPI Docker hands-on repository under Theory/Unit4, added the verified CI and local Docker status, and updated both coursework portals.
