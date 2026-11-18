@@ -1,0 +1,35 @@
+name: Unit 4 Docker comparison
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'Theory/Unit4/Docker-Compose-vs-Run/**'
+      - '.github/workflows/unit4-docker-comparison.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  compare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    defaults:
+      run:
+        working-directory: Theory/Unit4/Docker-Compose-vs-Run
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compare Nginx responses
+        run: |
+          trap 'docker rm -f unit4-nginx >/dev/null 2>&1 || true; docker compose down' EXIT
+          docker run -d --name unit4-nginx -p 127.0.0.1:8080:80 -v "$PWD/html:/usr/share/nginx/html:ro" -e NGINX_HOST=localhost --restart unless-stopped nginx:alpine
+          curl -fsS --retry 10 --retry-all-errors --retry-delay 1 http://127.0.0.1:8080/ -o /tmp/unit4-run.html
+          docker rm -f unit4-nginx
+          docker compose up -d
+          curl -fsS --retry 10 --retry-all-errors --retry-delay 1 http://127.0.0.1:8080/ -o /tmp/unit4-compose.html
+          cmp html/index.html /tmp/unit4-run.html
+          cmp /tmp/unit4-run.html /tmp/unit4-compose.html
+      - name: Check WordPress and MySQL Compose stack
+        run: |
+          trap 'docker compose -f wordpress.compose.yaml logs --tail=30; docker compose -f wordpress.compose.yaml down -v' EXIT
+          docker compose -f wordpress.compose.yaml up -d --wait --wait-timeout 180
+          curl -fsSL --retry 15 --retry-all-errors --retry-delay 2 http://127.0.0.1:8081/ -o /tmp/unit4-wordpress.html
+          grep -iq 'wordpress' /tmp/unit4-wordpress.html

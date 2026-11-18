@@ -8,6 +8,10 @@ Saksham Katiyar · SAP ID: 590015169
 
 The lecture's arithmetic FastAPI server, basic Requests test script and parameterized pytest checks are stored in `L44-L45/`. The workflow starts Uvicorn and checks the real HTTP responses automatically. This does not change the earlier Student API.
 
+## Docker Compose vs Docker Run
+
+[Docker Compose vs Docker Run](Docker-Compose-vs-Run/README.md) — Compare Docker Run and Docker Compose with the same Nginx page, then run WordPress and MySQL as a two-service example.
+
 ## Docker hands-on — separate repository
 
 The Docker task is kept in its own repository as required by its tutorial. The reference below connects it to the main coursework repository.

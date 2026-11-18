@@ -67,15 +67,19 @@ L26 contains the shared Django project extended by L27 and L28. Unit 3 is comple
 
 [Open Unit 4 reference](./Theory/Unit4/README.md) · [FastAPI Docker hands-on repository](https://github.com/saksham001k/fastapi-docker-handson) · [Successful workflow](https://github.com/saksham001k/fastapi-docker-handson/actions/runs/44060310292)
 
-The Student API, Dockerfile, two FastAPI instances, Nginx configuration and GitHub Actions workflow are maintained in the separate repository required by the tutorial. The Docker project is referenced here; the L44–L45 API testing exercise is stored directly under Theory/Unit4.
+The Student API, Dockerfile, two FastAPI instances, Nginx configuration and GitHub Actions workflow are maintained in the separate repository required by the tutorial. The Docker project is referenced here; the L44–L45 and Docker comparison exercises are stored directly under Theory/Unit4.
 
-Five API tests, Docker build, 20 load-balanced requests, multi-platform Docker Hub publishing, and pulling/running the published image passed in Actions. Local Docker Compose startup and API requests were also confirmed on my Mac. This Docker hands-on and the L44–L45 testing exercise do not mean the whole unit is complete. The separate visible source-change demonstration remains to be recorded.
+Five API tests, Docker build, 20 load-balanced requests, multi-platform Docker Hub publishing, and pulling/running the published image passed in Actions. Local Docker Compose startup and API requests were also confirmed on my Mac. These exercises cover parts of Unit 4. The separate visible source-change demonstration remains to be recorded.
 
 ### L44–L45 — Backend API test automation
 
 [Open exercise](./Theory/Unit4/L44-L45/README.md) · [GitHub Actions workflow](./.github/workflows/backend-api-tests.yml)
 
 FastAPI addition, subtraction and multiplication routes, three Requests checks and 12 parameterized/validation/root pytest checks. GitHub Actions starts the server and runs real HTTP tests on relevant pushes and pull requests. All three Requests checks and all 12 pytest cases passed locally and in [GitHub Actions](https://github.com/saksham001k/Backend-Development-/actions/runs/44290479629). The earlier Docker reference remains in place.
+
+### Docker Compose vs Docker Run
+
+[Open the Unit 4 exercise](./Theory/Unit4/Docker-Compose-vs-Run/README.md). Compare Docker Run and Docker Compose with the same Nginx page, then run WordPress and MySQL as a two-service example.
 
 ## Laboratory Experiments
 
@@ -143,6 +147,7 @@ Backend-Development-/
 │   ├── Unit2/L16/
 │   ├── Unit4/
 │   │   ├── README.md  (index and separate Docker-project reference)
+│   │   ├── Docker-Compose-vs-Run/
 │   │   └── L44-L45/  (FastAPI, Requests and pytest)
 │   ├── Unit3/
 │   │   ├── L25/
@@ -162,7 +167,7 @@ Backend-Development-/
 
 Laboratory submissions through Experiment 13A and the combined Experiment 15, all six Unit 1 theory tasks, Unit 2 Lectures 13 through 16, Unit 3 Lectures 25 through 28, and the two assignments are maintained in this repository. Assignment 2 includes commands for a local PostgreSQL and MongoDB run; its EXPLAIN ANALYZE timings are pending that run.
 
-Unit 2 L17–L24 and Unit 3 L29 onward remain pending. There are 15 theory exercises across Units 1–3 and two Unit 4 entries: the separate Docker hands-on reference and the L44–L45 API testing exercise. This is not continuous completion of every lecture or all of Unit 4.
+Unit 2 L17–L24 and Unit 3 L29 onward remain pending. There are 15 theory exercises across Units 1–3 and three Unit 4 entries: the separate Docker hands-on reference, L44–L45 API testing and Docker Compose vs Docker Run. This is not continuous completion of every lecture or all of Unit 4.
 
 ## Work log
 
