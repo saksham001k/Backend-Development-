@@ -56,7 +56,7 @@ To test a server on another port, set `BASE_URL`, for example `BASE_URL=http://1
 
 ## Verification
 
-On 18 November 2026, all three Requests checks and all 12 pytest cases passed against a live local Uvicorn server using Python 3.12. GitHub Actions verification is checked after upload. Optional production extensions discussed in the slides are not part of this small exercise.
+On 18 November 2026, all three Requests checks and all 12 pytest cases passed against a live local Uvicorn server using Python 3.12. The same checks also passed in [GitHub Actions](https://github.com/saksham001k/Backend-Development-/actions/runs/44290479629). Optional production extensions discussed in the slides are not part of this small exercise.
 
 ## References
 

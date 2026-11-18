@@ -75,7 +75,7 @@ Five API tests, Docker build, 20 load-balanced requests, multi-platform Docker H
 
 [Open exercise](./Theory/Unit4/L44-L45/README.md) · [GitHub Actions workflow](./.github/workflows/backend-api-tests.yml)
 
-FastAPI addition, subtraction and multiplication routes, three Requests checks and 12 parameterized/validation/root pytest checks. GitHub Actions starts the server and runs real HTTP tests on relevant pushes and pull requests. The earlier Docker reference remains in place.
+FastAPI addition, subtraction and multiplication routes, three Requests checks and 12 parameterized/validation/root pytest checks. GitHub Actions starts the server and runs real HTTP tests on relevant pushes and pull requests. All three Requests checks and all 12 pytest cases passed locally and in [GitHub Actions](https://github.com/saksham001k/Backend-Development-/actions/runs/44290479629). The earlier Docker reference remains in place.
 
 ## Laboratory Experiments
 
