@@ -1,8 +1,16 @@
-# Unit 4 — FastAPI Docker Hands-on
+# Unit 4 — Docker and API Test Automation
 
 Saksham Katiyar · SAP ID: 590015169
 
-This task is kept in its own repository as required by the tutorial. Only this reference is stored in the main coursework repository.
+## L44–L45 — Backend API Test Automation
+
+[Open the exercise](L44-L45/README.md) · [Test workflow](../../.github/workflows/backend-api-tests.yml)
+
+The lecture's arithmetic FastAPI server, basic Requests test script and parameterized pytest checks are stored in `L44-L45/`. The workflow starts Uvicorn and checks the real HTTP responses automatically. This does not change the earlier Student API.
+
+## Docker hands-on — separate repository
+
+The Docker task is kept in its own repository as required by its tutorial. The reference below connects it to the main coursework repository.
 
 - [Source and full run instructions](https://github.com/saksham001k/fastapi-docker-handson)
 - [Successful GitHub Actions run](https://github.com/saksham001k/fastapi-docker-handson/actions/runs/44060310292)

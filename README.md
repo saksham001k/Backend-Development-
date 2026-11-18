@@ -67,9 +67,15 @@ L26 contains the shared Django project extended by L27 and L28. Unit 3 is comple
 
 [Open Unit 4 reference](./Theory/Unit4/README.md) · [FastAPI Docker hands-on repository](https://github.com/saksham001k/fastapi-docker-handson) · [Successful workflow](https://github.com/saksham001k/fastapi-docker-handson/actions/runs/44060310292)
 
-The Student API, Dockerfile, two FastAPI instances, Nginx configuration and GitHub Actions workflow are maintained in the separate repository required by the tutorial. This course repository contains the reference only.
+The Student API, Dockerfile, two FastAPI instances, Nginx configuration and GitHub Actions workflow are maintained in the separate repository required by the tutorial. The Docker project is referenced here; the L44–L45 API testing exercise is stored directly under Theory/Unit4.
 
-Five API tests, Docker build, 20 load-balanced requests, multi-platform Docker Hub publishing, and pulling/running the published image passed in Actions. Local Docker Compose startup and API requests were also confirmed on my Mac. This is one Unit 4 hands-on task, not completion of the whole unit. The separate visible source-change demonstration remains to be recorded.
+Five API tests, Docker build, 20 load-balanced requests, multi-platform Docker Hub publishing, and pulling/running the published image passed in Actions. Local Docker Compose startup and API requests were also confirmed on my Mac. This Docker hands-on and the L44–L45 testing exercise do not mean the whole unit is complete. The separate visible source-change demonstration remains to be recorded.
+
+### L44–L45 — Backend API test automation
+
+[Open exercise](./Theory/Unit4/L44-L45/README.md) · [GitHub Actions workflow](./.github/workflows/backend-api-tests.yml)
+
+FastAPI addition, subtraction and multiplication routes, three Requests checks and 12 parameterized/validation/root pytest checks. GitHub Actions starts the server and runs real HTTP tests on relevant pushes and pull requests. The earlier Docker reference remains in place.
 
 ## Laboratory Experiments
 
@@ -135,7 +141,9 @@ Backend-Development-/
 │   ├── Unit2/L14B/
 │   ├── Unit2/L15/
 │   ├── Unit2/L16/
-│   ├── Unit4/README.md  (reference to separate FastAPI Docker repository)
+│   ├── Unit4/
+│   │   ├── README.md  (index and separate Docker-project reference)
+│   │   └── L44-L45/  (FastAPI, Requests and pytest)
 │   ├── Unit3/
 │   │   ├── L25/
 │   │   ├── L26/  (shared Django project for L26–L28)
@@ -154,7 +162,7 @@ Backend-Development-/
 
 Laboratory submissions through Experiment 13A and the combined Experiment 15, all six Unit 1 theory tasks, Unit 2 Lectures 13 through 16, Unit 3 Lectures 25 through 28, and the two assignments are maintained in this repository. Assignment 2 includes commands for a local PostgreSQL and MongoDB run; its EXPLAIN ANALYZE timings are pending that run.
 
-Unit 2 L17–L24 and Unit 3 L29 onward remain pending. There are 15 theory exercises across Units 1–3 and one referenced Unit 4 Docker hands-on task. This is not continuous completion of every lecture or all of Unit 4.
+Unit 2 L17–L24 and Unit 3 L29 onward remain pending. There are 15 theory exercises across Units 1–3 and two Unit 4 entries: the separate Docker hands-on reference and the L44–L45 API testing exercise. This is not continuous completion of every lecture or all of Unit 4.
 
 ## Work log
 
@@ -180,3 +188,5 @@ Unit 2 L17–L24 and Unit 3 L29 onward remain pending. There are 15 theory exerc
 - 28 October 2026: Extended the existing LAB/Exp15 app with Theory L28: requests utility, external-post JSON route, timeout/error handling, shared-header link and mocked tests. All 20 Exp15 tests passed. Updated the lab report, READMEs and both portals.
 
 - 17 November 2026: Linked the separate FastAPI Docker hands-on repository under Theory/Unit4, added the verified CI and local Docker status, and updated both coursework portals.
+
+- 18 November 2026: Added the L44–L45 arithmetic API, Requests tests, pytest cases and automated HTTP-testing workflow under the existing Unit 4 theory work. Updated the course index and page.
