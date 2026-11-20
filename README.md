@@ -69,7 +69,7 @@ L26 contains the shared Django project extended by L27 and L28. Unit 3 is comple
 
 The Student API, Dockerfile, two FastAPI instances, Nginx configuration and GitHub Actions workflow are maintained in the separate repository required by the tutorial. The Docker project is referenced here; the L44–L45 and Docker comparison exercises are stored directly under Theory/Unit4.
 
-Five API tests, Docker build, 20 load-balanced requests, multi-platform Docker Hub publishing, and pulling/running the published image passed in Actions. Local Docker Compose startup and API requests were also confirmed on my Mac. These exercises cover parts of Unit 4. The separate visible source-change demonstration remains to be recorded.
+Five API tests, Docker build, 20 load-balanced requests, multi-platform Docker Hub publishing, and pulling/running the published image passed in Actions. Local Docker Compose startup and API requests were also confirmed on my Mac. These exercises cover parts of Unit 4. The [Combined Hands-on PBL](https://github.com/saksham001k/fastapi-docker-handson/blob/main/COMBINED-HANDSON.md) extends the same Docker repo with the earlier Task 3 Student Management API and automated live HTTP tests.
 
 ### L44–L45 — Backend API test automation
 

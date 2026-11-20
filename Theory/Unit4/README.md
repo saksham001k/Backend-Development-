@@ -12,6 +12,10 @@ The lecture's arithmetic FastAPI server, basic Requests test script and paramete
 
 [Docker Compose vs Docker Run](Docker-Compose-vs-Run/README.md) — Compare Docker Run and Docker Compose with the same Nginx page, then run WordPress and MySQL as a two-service example.
 
+## Combined Hands-on PBL
+
+[Open the existing Docker project’s combined exercise](https://github.com/saksham001k/fastapi-docker-handson/blob/main/COMBINED-HANDSON.md). It reuses [Theory Task 3](../Task3/), tests the Student Management API over HTTP, and checks the updated Docker Hub image after publishing. The previous Compose and Nginx setup is reused.
+
 ## Docker hands-on — separate repository
 
 The Docker task is kept in its own repository as required by its tutorial. The reference below connects it to the main coursework repository.
@@ -27,7 +31,7 @@ A FastAPI Student API with `/`, `/health` and `/students`, request timing/loggin
 
 ## Verification
 
-Five API tests, Docker build, two-instance startup, 20 load-balanced requests, Intel/AMD and Apple Silicon publishing, and pulling/running the published image passed in Actions. Local Compose startup and requests to the root, students, health and docs routes were confirmed on my Mac on 17 November 2026. Nginx logs showed both upstream instances. The separate visible source-change → push → updated-image demonstration remains to be recorded; this reference does not claim all Unit 4 lectures are complete.
+Five API tests, Docker build, two-instance startup, 20 load-balanced requests, Intel/AMD and Apple Silicon publishing, and pulling/running the published image passed in Actions. Local Compose startup and requests to the root, students, health and docs routes were confirmed on my Mac on 17 November 2026. Nginx logs showed both upstream instances. The original Docker demo results above are separate from the Combined Hands-on extension linked above.
 
 ## Run locally
 
